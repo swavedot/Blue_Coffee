@@ -1,0 +1,863 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@font-face {
+  font-family: 'kdg_Medium'; /* 내가 지을 수 있는 이름 */
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/kdg_Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: '행복고흥L';  
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/행복고흥L.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SangSangFlowerRoad'; 
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/SangSangFlowerRoad.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KCCHyerim-Regular';  
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/KCCHyerim-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 공통부문 */
+.brand_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px; /* 텍스트와 아이콘 간격 */
+  padding: 15px 20px;
+  border: none;
+  border-radius: 999px;
+  background-color: white;
+  color: #00263c; /* 텍스트 색상 */
+  font-size: 19px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.brand_button:hover {
+  background-color: #2F8DF8; /* 푸른여 메인 컬러 */
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.fixed{overflow: hidden}
+.swiper-wrapper {height: auto !important;}
+#wrap{overflow: hidden;}
+
+
+/* 기본 스타일 */
+.header{
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 100; 
+  transition: all 0.3s; 
+  overflow: hidden;
+  /* cursor: pointer; */ /* 헤더 전체에 커서 포인터는 혼란을 줄 수 있어 제거 */
+}
+.header .headerInner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.header .logo .off {
+  display: block;
+  width: 75px;
+  height: 112px;
+}
+.header .logo .on {
+  display: none;
+  width: 75px;
+  height: 112px;
+}
+.header .gnb_sub {
+  position: absolute;
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  padding: 5px 100px;
+  top: 0;
+}
+.header .gnb_sub ul {
+  display: flex;
+  justify-content: right;
+  right: 30px;
+  gap: 20px;
+}
+.header .gnb_sub ul li {
+  position: relative;
+  color: #ffffff;
+}
+.header .gnb_sub ul li a:hover {
+  color: #2F8DF8;
+  cursor: pointer;
+}
+.header .gnb_sub ul li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 12px;
+  background-color: #007aff; /* 구분선 색상 */
+}
+.header .headerInner h1{
+  margin: 20px auto 0 100px;
+} 
+.header .headerInner .gnb{
+  display: flex; 
+  margin: 35px auto; 
+  gap: 8rem;
+  padding-top: 30px;
+  /* cursor: pointer; */ /* GNB 전체에 커서 포인터는 혼란을 줄 수 있어 제거 */
+}
+.header .headerInner .gnb .dep1{
+  font-size: 20px; 
+  color: #ffffff; 
+  position: relative; 
+  /* cursor: pointer; */ /* dep1 자체에 커서 포인터는 혼란을 줄 수 있어 제거 */
+}
+.header .headerInner .gnb .dep1 > span{ 
+    font-weight: 600;
+    display: block; /* span이 a를 감싸고 있으므로 블록 레벨로 만들어 클릭 영역 확보 */
+    padding: 5px 0; /* 클릭 영역 확보를 위한 패딩 */
+}
+/* dep1 span 내부의 a에 호버 시 색상 변경 */
+.header .headerInner .gnb .dep1 > span > a:hover { 
+    color: #000;
+}
+
+.header .headerInner .gnb .dep1 > .dep2{
+  display:none ; /* JavaScript가 제어할 것이므로 초기 display:none 유지 */
+  position: absolute;  
+  font-size: 17px; 
+  padding: 30px 0 75px; 
+  color: #ddc81a; 
+  font-family: 'SUIT'; 
+  font-weight: 400;}
+
+.header .headerInner .gnb .dep1 > .dep2 li:hover{
+    color: #fff; 
+    text-decoration: underline; 
+    text-underline-offset: 3px;  
+    text-decoration-thickness: 1px; 
+    text-decoration-color: #fff;
+}
+/* 이 부분에서 display: block;을 제거해야 합니다! JavaScript가 제어합니다. */
+.header .headerInner .gnb .dep1:hover > .dep2{  
+  /* display: block; */ /* 이 줄을 삭제하거나 주석 처리하세요. */
+  padding-top: 20px;
+}
+.header .headerInner .gnb .dep1 > .dep2 li + li{margin-top:13px;}
+
+.header .headerInner .utill{
+  display: flex; 
+  gap: 10px; 
+  margin: 45px 100px 0 auto ;
+}
+.header .headerInner .utill .menu,
+.header .headerInner .utill .shop {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 55px; 
+  height: 55px; 
+  border-radius: 50%; 
+  border: 3px solid #ffffff;
+  cursor: pointer; /* 버튼에 포인터 유지 */
+}
+
+.header .headerInner .utill .shop .off, 
+.header .headerInner .utill .menu .off {
+  display: block;
+  width: 25px;
+  height: 28px;
+  color: #fff;
+}
+
+.header .headerInner .utill .shop .on {display: none;}
+.header .headerInner .utill .menu .on {display: none;}
+
+
+/*header fixed*/
+.header.fixed {background-color: #fff; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);}
+.header.fixed .gnb_sub ul li {
+  color: #2F8DF8;
+}
+.header.fixed .logo .off {display: none;}
+.header.fixed .logo .on {display: block;}
+.header.fixed .headerInner .gnb .dep1 {color: #000;}
+/* fixed 상태일 때 dep1 span 내부의 a에 호버 시 색상 변경 */
+.header.fixed .headerInner .gnb .dep1 > span > a:hover {
+    color: #2F8DF8;
+}
+.header.fixed .headerInner .gnb .dep1 > .dep2 li {color: #000;}
+.header.fixed .headerInner .utill a, .header.fixed .headerInner .utill button  {border-color: #2F8DF8;}
+.header.fixed .headerInner .utill .shop .off {display: none;}
+.header.fixed .headerInner .utill .shop .on {display: block;}
+.header.fixed .headerInner .utill .menu .off {display: none;}
+.header.fixed .headerInner .utill .menu .on {display: block;}
+
+
+.header.fixed.on {background-color: transparent;}
+.header.fixed.on .headerInner .gnb .dep1 {color: #000;}
+/* fixed.on 상태일 때 dep1 span 내부의 a에 호버 시 색상 변경 */
+.header.fixed.on .headerInner .gnb .dep1 > span > a:hover {
+    color: #2F8DF8;
+}
+
+.header.fixed.on .gnb .menu-item > .dep1 a, /* 이 선택자들은 HTML에 없는 .menu-item을 포함하고 있어 작동하지 않을 수 있습니다. */
+.header.fixed.on .gnb .menu-item .dep2 a {
+  color: #000;
+}
+
+.header.fixed.on .gnb .menu-item .dep2 a:hover { /* 이 선택자들도 확인 필요 */
+  color: #2F8DF8;
+}
+
+.header.on {overflow: unset;}
+.header.on .logo .off {display: none;}
+.header.on .logo .on {
+  display: block;
+  width: 75px;
+  height: 112px;
+}
+.header.on .gnb_sub ul li { color: #2F8DF8;}
+.header.on .headerInner .gnb .dep1 {color: #000; }
+/* on 상태일 때 dep1 span 내부의 a에 호버 시 색상 변경 */
+.header.on .headerInner .gnb .dep1 > span > a:hover {
+    color: #2F8DF8;
+}
+.header.on .headerInner .gnb .dep1 > .dep2 li {color: #000;}
+.header.on .headerInner .gnb .dep1 > .dep2 li:hover {color: #2F8DF8;}
+.header.on .headerInner .utill a, .header.on .headerInner .utill button  {border-color: #2F8DF8;}
+.header.on .headerInner .utill .shop .on {display: block;}
+.header.on .headerInner .utill .shop .off {display: none;}
+.header.on .headerInner .utill .menu .on {display: block;}
+.header.on .headerInner .utill .menu .off {display: none;}
+
+
+
+/* fixed + on 상태 - 투명 헤더 스타일 */
+.header.fixed.on {
+  background-color: transparent;
+}
+
+/* on 상태에서 overflow 복원 */
+.header.on {
+  overflow: unset;
+}
+
+/* on 상태 - gnb_sub 텍스트 컬러 */
+.header.on .gnb_sub ul li {
+  color: #2F8DF8;
+}
+.menuHover{
+  display: block; 
+  opacity: 0; 
+  height: 350px; 
+  position: absolute; 
+  top: 0; 
+  width: 100%; 
+  z-index: -1; 
+  overflow: hidden; 
+  transition: all 0.4s;
+  cursor: pointer;
+}
+  
+.menuHover.on{
+  height: 350px;  
+  opacity: 1;
+}
+.menuHover::after{content: ""; position: absolute; background: #fff; width: 100%; height: 350px; top: 0; left: 0; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);}
+.menuHover .menuHover_inner{width:1400px; margin: 0 auto; position: relative; height: 100%; }
+.menuHover .img .on{
+  position: absolute;
+  width: 130px;
+  height: auto;
+  bottom: 35rem;
+  left: 7rem;
+  z-index: 999;
+}
+
+
+/* main_Visual */
+.main_visual{
+  width: 100%;
+  height: 947px;
+  background: url(../images/header_img.png) no-repeat center / cover;
+}
+.main_visual .mvisTop {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.main_logo {
+  position: absolute;
+  width: 256px;
+  height: 384px;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 10;
+}
+.main_logo.fixed {
+  position: fixed;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main_logo.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* msection */
+
+.msection { 
+  width: 100%; 
+  height: 822px;
+  margin: 0 auto; 
+  background: url(../images/bg_mainmenu.png) no-repeat center / cover; 
+  position: relative;
+  overflow: hidden;
+}
+.msection_content {
+  max-width: 1440px;
+  width: 100%;
+  height: 822px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.msection_content .menu_img {
+  position: absolute;
+  top: 161px;
+  margin-left: -20px;
+}
+.msection_content .menu_img .menu_img_01 {
+  position: absolute;
+  top: 300;
+  left: 40px;
+  z-index: 1;
+}
+.msection_content .menu_img .menu_img_02 {
+  position: absolute;
+  left: 264px;
+  top: 0;
+}
+.msection_content .menu_top{
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+.msection_content .menu_top img {
+  position: absolute;
+  top: 216px;
+  right: 40px;
+  width: 127px;
+  height: 190px;
+}
+.msection_content .menu_title {
+  position: absolute;
+  top: 418px;
+  right: 50px;
+}
+.msection_content .menu_title p {
+  font-size: 24px;
+  font-weight: 200;
+  font-family: 'NanumSquare', sans-serif;
+  text-align: right;
+  line-height: 30px;
+  letter-spacing: -0.9px;
+  color: #fff;
+}
+.msection_content .menu_title p span {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+.msection_content .menu_button {
+  position: absolute;
+  top: 61%;
+  right: 50px;
+}
+.msection_content .menu_button .brand_button:hover {
+  background-color: #2F8DF8;
+}
+
+
+/* signature */
+.signature {
+  width: 100%;
+}
+.signature_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 600px;
+  background: url(../images/bg_signature_top.png) no-repeat center / cover;
+}
+.signature_top_content {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  bottom: 67px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.signature_top_content .signature_logo img {
+  position: absolute;
+  width: 127px;
+  height: 191px;
+  margin-left: 255px;
+  top: -40px;
+}
+.signature_top .signature_top_title {
+  position: absolute;
+  left: 244px;
+  top: 13px;
+  margin-left: 140px;
+}
+.signature_top .signature_top_title h1 {
+  font-size: 50px;
+  color: #2F8DF8;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -2.5px;
+}
+.signature_top .signature_top_title h2 {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 20%;
+  letter-spacing: -1.9px;
+}
+.signature_top .signature_top_title h2 span {
+  color: #2F8DF8;
+}
+.signature_top .brand_button {
+  color: #fff;
+  background-color: #2F8DF8;
+  margin-top: 37px;
+  position: absolute;
+  left: 44%;
+  top: 83px;
+}
+.signature_top .brand_button:hover {
+  color:#fff;
+  background-color: #fbc403;
+}
+.signature_bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EBFCFF;
+  height: 500px;
+  position: relative;
+}
+.signature_bottom .signature_bottom_content {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.signature_bottom .signature_bottom_title {
+  position: absolute;
+  text-align: center;
+  right: 100px;
+  top: 6rem;
+}
+.signature_bottom .signature_bottom_title h1 {
+  font-size: 50px;
+  font-weight: 400;
+  font-family: 'KCCHyerim-Regular'; 
+  line-height: 140%;
+  letter-spacing:-0.9px;
+  color: #2F8DF8;
+}
+.signature_bottom .signature_bottom_title h2 {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 80%;
+  letter-spacing:-0.5px;
+  color: #62696a;
+}
+.signature_bottom .signature_bottom_title h2 span {
+  font-weight: 500;
+}
+.signature_bottom .signature_bottom_img {
+  position: absolute;
+  top: -237px;
+  left: 100px;
+
+} 
+.signature_bottom .signature_img_01 {
+  position: absolute;
+  top: -70px;
+  left: 605px;
+}
+.signature_bottom .signature_img_02 {
+  position: absolute;
+  top: 58px;
+  left: 376px;
+}
+.signature_bottom .signature_img_03 {
+  position: absolute;
+  top: -118px;
+  left: 112px;
+}
+
+
+/* membership */
+.membership {
+  width: 100%;
+  height: 500px;
+  background: url(../images/bg_membership.png) no-repeat center / cover;
+}
+.membership .membership_content {
+  max-width: 1440px;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.membership_content .membership_img {
+  position: absolute;
+  margin-top: -55px;
+}
+.membership_content .membership_img .img_01 {
+  position: absolute;
+  bottom: -128px;
+  left: 50px;
+  z-index: 1;
+}
+.membership_content .membership_img .img_02 {
+  position: absolute;
+  left: 392px;
+  bottom: -200px;
+}
+.membership_content .membership_text {
+  position: absolute;
+  color: #F0F0F0;
+  z-index: 2;
+  top: 13rem;
+  right: 322px;
+}
+.membership_content .membership_text h1 {
+  font-size: 50px;
+  line-height: 140%;
+  letter-spacing: -0.9px;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.membership_content .membership_text h2 {
+  font-size: 26px;
+  font-weight: 200;
+  line-height: 0px;
+  letter-spacing: -0.9px;
+}
+.membership_content .membership_text p {
+  margin-top: 30px;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 130%;
+  letter-spacing: -0.5px;
+  color: #acb0c8;
+
+}
+.membership_content .membership_btn {
+  position: absolute;
+  top: 21rem;
+  left: 0;
+}
+.membership_content .brand_btn:hover {
+  background-color: #2F8DF8;
+}
+.membership_content .membership_contact {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 20px;
+  right: 200px;
+  top: 12rem;
+}
+.membership_content .membership_contact img {
+  position: absolute;
+  width: 129px;
+  height: 194px;
+}
+.membership_content .membership_icon {
+  top: 24rem;
+  right: 17px;
+  position: absolute;
+}
+.membership_content .membership_icon img {
+  width: 162px;
+  height: 41px;
+}
+
+
+/* space */
+.space {
+  width: 100%;
+  background: url(../images/bg_space.png) no-repeat center / cover;
+}
+.space .space_intro {
+  max-width: 1440px;
+  width: 100%;
+  height: 831px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.space_intro .space_intro_title{
+  position: absolute;
+  display: flex;
+  align-items: center; /* 세로 정렬! */
+  justify-content: center; /* 가로 정렬 (선택사항) */
+  height: 268px; /* 부모 높이 필요 */
+  top: 12%;
+  left: 13%;
+}
+.space_intro .space_intro_title h1 {
+  width: 10px;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 400;
+  font-family: 'NanumSquare', sans-serif;
+}
+.space_intro .space_intro_desc {
+  position: absolute;
+  top: 100px;
+  margin-right: 170px;
+}
+.space_intro .space_intro_desc h1 {
+  color: #dddddd;
+  font-family: 'NanumSquare', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.9px;
+}
+.space_intro .space_intro_desc p {
+  color: #F0F0F0;
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: -0.5px;
+  color: #98abb5;
+}
+.space_intro .space_btn {
+  position: absolute;
+  top: 30%;
+  margin-right: 32%;
+}
+.space_intro .space_btn .brand_button:hover {
+  background-color: #2F8DF8;
+}
+.space_intro .space_content {
+  position: absolute;
+  top: 244px;
+  right: 630px;
+}
+.space_intro .space_content .space_01 {
+  position: absolute;
+  top: 59px;
+  left: -79px;
+}
+.space_intro .space_content .space_01:hover {
+  background-color: #C7ABF4;
+  cursor: pointer;
+}
+.space_intro .space_content .space_02 {
+  position: absolute;
+  top: 5px;
+  left: 108px;
+}
+.space_intro .space_content .space_02:hover {
+  background: url(../images/space_02_hover.svg);
+  cursor: pointer;
+}
+.space_intro .space_content .space_03 {
+  position: absolute;
+  top: -132px;
+  left: 411px;
+}
+.space_intro .space_content .space_03:hover {
+  background-color: #CC2D75; 
+  cursor: pointer;
+}
+.space_intro .space_content .space_04 {
+  position: absolute;
+  top: 222px;
+  left: -80px;
+}
+.space_intro .space_content .space_04:hover {
+  background-color: #30BCF6; 
+  cursor: pointer;
+}
+.space_intro .space_content .space_05 {
+  position: absolute;
+  top: 222px;
+  left: 107px;
+}
+.space_intro .space_content .space_05:hover {
+  background-color: #1E3A8A;
+  cursor: pointer;
+}
+.space_intro .space_content .space_06 {
+  position: absolute;
+  top: 222px;
+  left: 410px;
+}
+.space_intro .space_content .space_06:hover {
+  background-color: #C52CC5;
+  cursor: pointer;
+}
+.space_intro .space_content .space_07 {
+  position: absolute;
+  top: -133px;
+  right: -403px;
+}
+
+
+
+.msection.menu .menu_top .tit{font-size: 60px; color: #000; margin-right: 55px; font-family: 'Geometos';}
+.msection.menu .menu_top .tab{display: flex; gap: 20px;}
+.msection.menu .menu_top .tab > div{display: flex; justify-content: center; align-items: center; height: 52px; border-radius: 26px; font-size: 26px; padding: 0 30px; color: #333; background: #fff; cursor: pointer; font-family: 'Geometos';}
+.msection.menu .menu_top .tab > div.active{background: #242424; color: #fff;}
+.msection.menu .menu_slider_wrap{position: relative; margin-top: 50px; margin-bottom:170px; }
+.msection.menu .menu_slider_wrap .swiper-wrapper{align-items: center; height: auto; }
+.msection.menu .menu_slider_wrap .swiper-wrapper .swiper-slide{width: 20%; position: relative;}
+.msection.menu .menu_slider_wrap .swiper-wrapper .swiper-slide .img{text-align: right;}
+.msection.menu .menu_slider_wrap .swiper-wrapper .swiper-slide .img img {width: 80%;}
+.msection.menu .menu_slider_wrap .swiper-wrapper .swiper-slide .txt{visibility: hidden; text-align: center; font-size: 18px; color: #333; margin-top: 40px; font-family: 'SUIT'; font-weight: 200; }
+.msection.menu .menu_slider_wrap .swiper-wrapper .swiper-slide .hover{display: none; width: 169px; height: 189px; background: url(../images/icon_menu_hover.png); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); align-items: center; justify-content: center; font-family: 'SUIT'; font-weight: 500; font-size: 22px; color: #fff; flex-direction: column;  cursor: pointer; text-align: center;}
+.msection.menu .menu_slider_wrap .swiper-wrapper .swiper-slide .hover img{margin-bottom: 10px;}
+.msection.menu .menu_slider_wrap .swiper-wrapper .swiper-slide.swiper-slide-next .img{text-align:right;}
+.msection.menu .menu_slider_wrap .swiper-wrapper .swiper-slide.swiper-slide-next + .swiper-slide .img{text-align:left;}
+.msection.menu .menu_slider_wrap .swiper-wrapper .swiper-slide.swiper-slide-prev .img{text-align:left;}
+.msection.menu .menu_slider_wrap .swiper-wrapper .swiper-slide.swiper-slide-active{transform: scale(1); margin:0}
+.msection.menu .menu_slider_wrap .swiper-wrapper .swiper-slide.swiper-slide-active:hover .hover{display: flex;}
+.msection.menu .menu_slider_wrap .swiper-wrapper .swiper-slide.swiper-slide-active .txt {visibility: visible;}
+.msection.menu .menu_slider_wrap .swiper-wrapper .swiper-slide.swiper-slide-active .img{text-align: center;}
+.msection.menu .menu_slider_wrap .swiper-wrapper .swiper-slide.swiper-slide-active .img img {width: 100%;}
+.msection.menu .menu_slider_wrap .sliderBtn{position: absolute; z-index: 6; top: 33%; left: 50%; transform: translateX(-50%); padding:0 100px; display: flex; justify-content: center; gap: 300px; pointer-events: none;}
+.msection.menu .menu_slider_wrap .sliderBtn button{width: 70px; height: 70px; align-items: center; justify-content: center; display: flex; border: 1px solid #d1d1d1; border-radius: 50%; pointer-events: auto;}
+.msection.menu .menu_slider_wrap .sliderBtn .menuPrev{}
+.msection.menu .menu_slider_wrap .sliderBtn .menuNext{}
+
+
+.msection.about{width: 100%; background: #dd1a32; display: flex;}
+.msection.about .aboutBox.active{width: 60%;}
+.msection.about .aboutBox{width: 20%; height: 940px; padding: 250px 0 0 40px; color: #fff; transition: all 1s ;}
+.msection.about .aboutBox:nth-of-type(2){border-left: 1px solid #e75f70; border-right: 1px solid #e75f70;}
+
+.msection.about .aboutBox.active:nth-of-type(1){background: url(../images/img_about_bg01.png) no-repeat center / cover;}
+.msection.about .aboutBox.active:nth-of-type(2){background: url(../images/img_about_bg02.png) no-repeat center / cover;}
+.msection.about .aboutBox.active:nth-of-type(3){background: url(../images/img_about_bg03.jpg) no-repeat center / cover;}
+.msection.about .aboutBox .tit{font-size: 40px; font-family: 'gmarket'; font-weight: 700;}
+.msection.about .aboutBox .desc{ font-size: 18px; margin-top: 45px; font-family: 'SUIT';  font-weight: 400;}
+.msection.about .aboutBox .link{opacity: 0; margin-top: 55px; }
+.msection.about .aboutBox .link a{width: 182px; height: 57px;   display: inline-block;   background: #fff; color: #000; font-family: 'SUIT';  font-weight: 200; font-size: 22px; border-radius: 28.5px; text-align: center; line-height: 57px;}
+.msection.about .aboutBox.active{padding-left:200px;}
+.msection.about .aboutBox.active .tit{font-size: 80px;}
+.msection.about .aboutBox.active .desc{font-size: 20px;}
+.msection.about .aboutBox.active .link{opacity: 1;}
+
+.msection.board{display: flex; justify-content: space-between; margin:100px auto;}
+.msection.board .snsWrap{width: 543px;}
+.msection.board .snsWrap .top{display: flex; justify-content: flex-start; align-items: baseline; margin-bottom: 80px;}
+.msection.board .snsWrap .top .tit{font-size: 72px; color: #000; margin-right: 40px; font-family: 'Geometos';}
+.msection.board .snsWrap .top .desc{font-size: 24px; color: #333; font-family: 'SUIT';  font-weight: 200;}
+.msection.board .snsWrap .img{display: flex; flex-wrap: wrap; gap: 40px;}
+.msection.board .snsWrap .img > div {
+    width: calc(50% - 20px);
+}
+.msection.board .snsWrap .img > div a {display: block;border-radius: 50%; overflow: hidden; border-bottom-left-radius: 0; position: relative;}
+.msection.board .snsWrap .img > div a::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+.msection.board .snsWrap .img > div a > img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 1000%;
+    min-height: 1000%;
+    max-width: none;
+    max-height: none;
+    -webkit-transform: translate(-50%, -50%) scale(0.1);
+            transform: translate(-50%, -50%) scale(0.1);
+}
+.msection.board .newsWrap{width: 700px;}
+.msection.board .newsWrap > .top{display: flex; justify-content: flex-start; align-items: baseline; margin-bottom: 80px;}
+.msection.board .newsWrap > .top .tit{font-size: 72px; color: #000; margin-right: 40px; font-family: 'Geometos';}
+.msection.board .newsWrap > .top .desc{font-size: 24px; color: #333; font-family: 'SUIT';  font-weight: 200;}
+
+.msection.board .newsWrap .boardWrap{}
+.msection.board .newsWrap .boardWrap + .boardWrap{margin-top: 60px;}
+.msection.board .newsWrap .boardWrap > .top{display: flex; justify-content: space-between;}
+.msection.board .newsWrap .boardWrap > .top .tit{font-size: 30px; color: #000; font-family: 'SUIT';  font-weight: 700;} 
+.msection.board .newsWrap .boardWrap > .top .link{}
+.msection.board .newsWrap .boardWrap > .top .link a{display: inline-block; background: #333; color: #fff; font-size: 15px; width: 80px; height: 30px; line-height: 30px; border-radius: 15px; text-align: center;}
+.msection.board .newsWrap .boardWrap > .list{border-top:1px solid #979797; border-bottom:1px solid #979797; margin-top: 20px;}
+.msection.board .newsWrap .boardWrap > .list > div{display: flex; align-items: center; height: 60px; font-family: 'SUIT';  font-weight: 700;} 
+.msection.board .newsWrap .boardWrap > .list > div:hover{color: #dd1a32; cursor: pointer;}
+.msection.board .newsWrap .boardWrap > .list > div + div{border-top: 1px solid #e4e4e4;}
+.msection.board .newsWrap .boardWrap > .list > div a{display: inline-block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+.msection.board .newsWrap .boardWrap > .list > div a::before{content: ''; display: inline-block; background: #000; font-weight: 300; width: 2px; height: 2px; border-radius: 50%; vertical-align: middle; margin-right: 8px;}
+
+
+/* footer */
+.footer{width: 100%; background: #2F8DF8; position: relative;}
+.footer_inner{max-width:1440px; margin: 0 auto; padding: 60px 0 60px; display: flex;}
+.footer_inner .flogoTel .ftel{margin-top: 15px;}
+.footer_inner .flogoTel .ftel li{font-size: 20px; color: #fff; line-height: 1 ; font-family: 'Pretendard'; font-weight: 300;}
+.footer_inner .flogoTel .ftel span{color: #fff; font-size: 20px; vertical-align: middle; font-family: 'Pretendard'; }
+.footer_inner .finfo{margin: 0 auto; margin-left: 20%;}
+.footer_inner .finfo .link{ display: flex; margin-top: 66px; }
+.footer_inner .finfo .link li{ margin-right: 39px; }
+.footer_inner .finfo .link li a{color: #fff; font-size: 20px; font-weight: 200;}
+.footer_inner .finfo .address{margin-top: 20px;}
+.footer_inner .finfo .address > li{ color: #fff; font-size : 16px; font-family: 'SUIT'; font-weight: 200;}
+.footer_inner .finfo .address > li.name{color: #fff;  font-weight: 300; font-family: 'Pretendard'; font-size: 10px;}
+.footer_inner .finfo .address > li.name span {color: #fff; font-family: 'kdg_Medium'; font-size: 20px; margin-right: 4px;}
+.footer_inner .finfo .copy{margin-top: 40px; color: #fff; font-size: 18px; font-weight: 100;}
+.footer_inner .fsns{margin: 0 auto; display: flex; gap: 10px;}
+.footer_inner .fsns img {width: 40px; height: 40px;}
+
+

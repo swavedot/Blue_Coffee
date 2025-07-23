@@ -1,0 +1,123 @@
+
+/* �쇳깭洹몄쓽 珥덇린�� */
+input, select, textarea, button{vertical-align: middle; /*-webkit-appearance: none; appearance: none;*/ color: 3e4047; background: #fff;}
+textarea{resize: none; min-height: 80px; width: 100%;}
+button {cursor:pointer; background: transparent;}
+select{text-overflow: ellipsis;}
+input::placeholder,
+textarea::placeholder{color: #333;}
+input[type=radio],
+input[type=checkbox] {cursor:pointer;}
+label{cursor:pointer; vertical-align: middle;}
+input::-ms-clear,
+input::-ms-reveal{
+    display:none;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+    display:none;
+}
+
+/* a�쒓렇 */
+a{cursor: pointer; color:var(--fontDefultColor);}
+a:link{text-decoration:none; }
+a:active{text-decoration:none; }
+a:visited{text-decoration:none;}
+a:hover{text-decoration:none; }
+
+/* checkbox, radio, input, select */
+input[type=checkbox]{position:relative; margin-right:3px; width:18px; height: 18px; }
+input[type=checkbox]:before{display:block; content:''; position:absolute;     width: 12px;
+    height: 12px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;z-index:2; cursor:pointer; background: #dd1a32; border: 1px solid #fff; border-radius: 5px;}
+input[type=checkbox]:checked:after{display:block; content:''; top: 3px; left: 3px; position:absolute; width:14px; height:14px; z-index:2; background: #fff; border-radius: 5px; }
+input[type=checkbox] + label{margin-right: 15px;}
+
+input[type=radio]{position:relative; margin-right:3px; width:18px; height: 18px;}
+input[type=radio]::before{display:block; content:''; position:absolute;  width:18px; height:18px; cursor:pointer; background: #dd1a32; border: 1px solid #fff; border-radius: 50%;}
+input[type=radio]:checked::after{display:block; content:''; top: 3px; left: 3px; position:absolute; width:14px; height:14px; z-index:2; background: #fff; border-radius: 50%;}
+input[type=radio] + label{margin-right: 15px;}
+
+/* 踰꾪듉�� �쇰뵒�� */
+.tabRadio{display: flex; margin-bottom: 20px;}
+.tabRadio label{display: block; height: 36px; line-height: 36px; padding: 0 20px; background: #dfe2ed; color: #bbbec9; font-size: 14px; border: 1px solid #dfe2ed;  border-left: 0; text-align: center;}
+.tabRadio input[type=radio] + label{margin-right: 0;}
+.tabRadio input[type=radio]:checked + label{background: #fff; color: var(--subColor);}
+.tabRadio input[type=radio]{display: none;}
+.tabRadio label:first-of-type{border-radius: 4px 0 0 4px; border-left: 1px solid #dfe2ed;}
+.tabRadio label:last-of-type{border-radius: 0 4px 4px 0;}
+
+/* 踰꾪듉�� 泥댄겕諛뺤뒪 */
+.tabChkbox{display: flex; margin-bottom: 20px;}
+.tabChkbox label{display: block; height: 36px; line-height: 36px; padding: 0 20px; background: #dfe2ed; color: #bbbec9; font-size: 14px; border: 1px solid #dfe2ed; border-left: 0; text-align: center;}
+.tabChkbox input[type=checkbox] + label{margin-right: 0;}
+.tabChkbox input[type=checkbox]:checked + label{background: #fff; color: var(--subColor);}
+.tabChkbox input[type=checkbox]{display: none;}
+.tabChkbox label:first-of-type{border-radius: 4px 0 0 4px; border-left: 1px solid #dfe2ed;}
+.tabChkbox label:last-of-type{border-radius: 0 4px 4px 0;}
+
+
+textarea,
+input[type=text],
+input[type=file],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=search],
+input[type=serch],
+input[type=date],
+input[type=time]{border: 1px solid #DCDDE3; }
+
+textarea:focus,
+input[type=text]:focus,
+input[type=file]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=search]:focus,
+input[type=serch]:focus,
+input[type=date]:focus,
+input[type=time]:focus{}
+
+textarea:disabled,
+input[type=text]:disabled,
+input[type=file]:disabled,
+input[type=password]:disabled,
+input[type=email]:disabled,
+input[type=number]:disabled,
+input[type=search]:disabled,
+input[type=serch]:disabled,
+input[type=date]:disabled,
+input[type=time]:disabled{}
+
+select{border: 1px solid #DCDDE3; }
+select:focus{border: 1px solid var(--subColor); }
+select:disabled{border: 1px solid #DCDDE3;  }
+
+
+/* toggle踰꾪듉 */
+.toggleInput {position: relative; display: inline-block; width:36px; height: 12px; border-radius: 6px; background: #edf0f9;}
+.toggleInput input {opacity:0; width:0; height:0;}
+.toggleInput input:checked + span:before {transform: translateY(-50%) translateX(20px);}
+.toggleInput span{position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background: #edf0f9; border-radius: 6px;}
+.toggleInput span:before {border-radius: 50%; position: absolute; content: ""; height: 20px; width: 20px; left:0px; top: 50%; transform: translateY(-50%); background: #fff; box-shadow: 3px 0 10px rgba(73, 75, 83, 0.3); transition: all 0.5s;}
+.toggleInput input:checked + span{background: var(--subColor);}
+.toggleInput input:disabled + span::before{background: #dfe2ed;}
+.toggleInput input:disabled + span{background: #f4f6fc;}
+
+/* tbody�ㅽ겕濡� */
+.scollTable{overflow: hidden; overflow-y: auto; height: 400px;}
+
+
+/* �섏씠吏� */
+.pagingWrap{font-size: 0; text-align: center; }
+.pagingWrap a{width: 28px; height: 28px; line-height: 28px;  display: inline-block; font-size: 16px; margin: 0 3px; text-align: center; color: #989ca9;}
+.pagingWrap .prev,
+.pagingWrap .next{text-indent: -9999px; }
+.pagingWrap .prev{background-position: -20px -172px;}
+.pagingWrap .next{background-position: -20px -195px;}
+.pagingWrap a.on{border-radius: 50%; background: var(--subColor); color: #fff; font-weight: bold;}

@@ -1,0 +1,175 @@
+.container_inner {
+  position: relative;
+  width: 1120px;
+  margin: 0 auto;
+}
+.newcont-2023.angelinus {
+  padding-bottom: 60px;
+}
+.newcont-2023 .content-box + .content-box {
+  margin-top: 60px;
+}
+.content_title {
+  margin-top: 120px;
+  margin-bottom: 35px;
+  /* padding-left: 15px; */
+  font-size: 30px;
+  font-family: 'Pretendard';
+  font-weight: 800;
+}
+.content_title::before {
+  content: '|';
+  color: #2F8DF8;
+  margin-right: 5px;
+
+}
+.newcont-2023 .title_dot, .newcont-2023.angelinus .title_dot, .newcont-2023.krispyKreme .title_dot {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 25px;
+  background-color: #00263C;
+}
+
+.newcont-2023 .biWrap .biBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* align-items: center; */
+  gap: 25px;
+  margin-bottom: 60px;
+}
+.container_inner * {
+  word-break: keep-all;
+}
+.biBox img {
+  vertical-align: middle;
+  border: 1px solid #64748B;
+}
+.newcont-2023 .biWrap .biBox .txtWrap p {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #00263C;
+  font-family: 'Pretendard';
+}
+.newcont-2023 .biWrap .biBox .txtWrap span {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 25px;
+  color: #64748B;
+  font-family: 'Pretendard';
+}
+.newcont-2023 .biWrap .biBox .txtWrap a span {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  font-family: 'Pretendard';
+}
+.newcont-2023 .biWrap .biBox .btnBox {
+  margin-top: 15px;
+  font-size: 0;
+}
+.newcont-2023 .biWrap .biBox .btnBox .btnDown {
+  padding: 18.5px 36px;
+  display: inline-block;
+  background: #2F8DF8;
+}
+.newcont-2023 .biWrap .biBox .btnBox .btnDown + .btnDown {
+  margin-left: 20px;
+}
+
+/* 핵심가치 */
+.section-mb {
+  margin-bottom: 120px;
+}
+.section-text .title-wrap {
+  margin-bottom: 16px;
+}
+.title-h3 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+.box-list {
+  margin: 24px -24px 24px -16px;
+  font-size: 0;
+}
+.box-list.__layout3>li {
+  width: calc(100% / 3 - 35px);
+}
+.box-list>li {
+  display: inline-block;
+  margin: 0 16px;
+  padding: 48px 20px 42px;
+  border: 1px solid #00263C;
+  text-align: center;
+  vertical-align: top;
+  
+}
+.box-list i {
+  display: block;
+  margin: 0 auto;
+}
+.icon-value-1 {
+  width: 122px;
+  height: 122px;
+  background: url(/images/sub_pg/ico_value_1.svg) 50% 50% no-repeat;
+}
+.icon-value-2 {
+  width: 122px;
+  height: 122px;
+  background: url(/images/sub_pg/ico_value_2.svg) 50% 50% no-repeat;
+}
+.icon-value-3 {
+  width: 122px;
+  height: 122px;
+  background: url(/images/sub_pg/ico_value_3.svg) 50% 50% no-repeat;
+}
+/* //핵심가치 */
+/* 행동규범 */
+
+.section-text {
+  margin-bottom: 64px;
+}
+.box-list.__layout5.type-act {
+  margin-right: 0;
+  margin-left: 0;
+}
+.box-list.__layout5.type-act>li:first-child {
+  border-left: 1px solid #64748B;
+}
+.box-list.__layout5.type-act>li {
+  width: calc(100% / 5);
+  margin: 0;
+  padding: 60px 40px;
+  border-left: none;
+}
+.icon-act-1 {
+  width: 60px;
+  height: 60px;
+  background: url(/images/sub_pg/ico_act_1.svg) 50% 50% no-repeat;
+}
+.icon-act-2 {
+  width: 60px;
+  height: 60px;
+  background: url(/images/sub_pg/ico_act_2.svg) 50% 50% no-repeat;
+}
+.icon-act-3 {
+  width: 60px;
+  height: 60px;
+  background: url(/images/sub_pg/ico_act_3.svg) 50% 50% no-repeat;
+}
+.icon-act-4 {
+  width: 60px;
+  height: 60px;
+  background: url(/images/sub_pg/ico_act_4.svg) 50% 50% no-repeat;
+}
+.icon-act-5 {
+  width: 60px;
+  height: 60px;
+  background: url(/images/sub_pg/ico_act_5.svg) 50% 50% no-repeat;
+}
+/* //행동규범 */

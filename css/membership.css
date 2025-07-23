@@ -1,0 +1,385 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+@font-face {
+  font-family: 'kdg_Medium'; /* 내가 지을 수 있는 이름 */
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/kdg_Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* 공통부문 */
+.brand_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px; /* 텍스트와 아이콘 간격 */
+  padding: 15px 20px;
+  border: none;
+  border-radius: 999px;
+  background-color: white;
+  color: #00263c; /* 텍스트 색상 */
+  font-size: 19px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.brand_button:hover {
+  background-color: #2F8DF8; /* 푸른여 메인 컬러 */
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.fixed{overflow: hidden}
+.swiper-wrapper {height: auto !important;}
+#wrap{overflow: hidden;}
+.allMenu_wrap{
+  width: 100%; 
+  display: none; 
+  opacity: 1; 
+  align-items: center;
+  justify-content: flex-end; 
+  position: fixed; 
+  z-index: 200; 
+  width: 27%; 
+  height: 120vh; 
+  right: 0;
+  background-color: #00263C;
+  transition: all 0.4s ease;
+}
+.allMenu_wrap.on{display: flex;  opacity: 1;}
+.allMenu{
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.allMenu_wrap #allMenuClose{
+  position: absolute; 
+  right: 30px; 
+  top: 30px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 52px; 
+  height: 52px; 
+  border-radius: 50%; 
+  border: 3px solid #ffffff; color: #fff;}
+
+.allMenu .menuWrap{
+  width: 90%;
+  /* padding-top: 200px; */
+  padding-bottom: 300px;
+}
+.allMenu .menuWrap .menu{
+  color: #fff; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top: #c8c8c8 solid 2px;
+  padding: 17px 15px;
+
+}
+.allMenu .menuWrap .menu:last-child {
+  border-bottom: #c8c8c8 solid 2px;
+}
+/* .allMenu .menuWrap .menu + .menu{margin-top: 60px;} */
+.allMenu .menuWrap .menu .dep1{
+  font-size: 26px; 
+  width: 500px; 
+  height: 0px;
+  font-family: 'SUIT'; 
+  font-weight: 600; 
+  color: #2F8DF8;
+  position: relative; 
+  text-decoration: none; 
+  text-underline-offset: 10px; 
+  text-decoration-thickness: 2px; 
+  transition: all 0.2s;
+}
+.allMenu .menuWrap .menu .dep1.on,
+.allMenu .menuWrap .menu .dep1:hover{
+  text-decoration-color: #2F8DF8; 
+  cursor: pointer;
+}
+
+.allMenu .menuWrap .menu .dep1.on:before,
+.allMenu .menuWrap .menu .dep1:hover:before{
+  position: absolute; 
+  top: 0; 
+  left: 10px;}
+.menu .dep2 {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu li.active .dep2 {
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+}
+.menu li.active .dep2 a {
+  font-size: 20px;
+}
+.allMenu .menuWrap .menu .dep2 a:hover{
+  color: #2F8DF8; 
+  text-underline-offset: 5px; 
+  text-decoration-thickness: 1px; 
+  text-decoration-color: #2F8DF8; 
+  cursor: pointer;
+}
+.allMenu .menuWrap .menu .dep2 a {display: block;}
+
+.moMenuImg{display: none;}
+.moLogo{display:none;}
+
+.menuHover{
+  display: block; 
+  opacity: 0; 
+  height: 700px;   
+  position: absolute; 
+  top: 0; 
+  width: 100%; 
+  z-index: -1; 
+  overflow: hidden; 
+  transition: all 0.4s;}
+.menuHover.on{
+  height: 700px;  
+  opacity: 1;
+}
+.menuHover::after{content: ""; position: absolute; background: #fff; width: 100%; height: 500px; top: 0; left: 0;}
+.menuHover .menuHover_inner{width:1400px; margin: 0 auto; position: relative; height: 100%;}
+.menuHover .img .on{
+  position: absolute; 
+  width: 200px;
+  height: 300px;
+  bottom: 200px; 
+  left: 20px; 
+  z-index: 999;
+}
+.header{position: fixed; top: 0; width: 100%; z-index: 100; transition: all 0.3s; overflow: hidden;}
+.header .logo .off {
+  display: block;
+  width: 75px;
+  height: 112px;
+}
+.header .logo .on {
+  display: none;
+  width: 75px;
+  height: 112px;
+}
+.header .headerInner {
+  display: flex;
+  position: relative;
+  /* background-color: #fff; */
+}
+.header .gnb_sub {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  padding: 5px 100px;
+}
+.header .gnb_sub ul {
+  display: flex;
+  justify-content: right;
+  right: 30px;
+  gap: 20px;
+}
+.header .gnb_sub ul li {
+  position: relative;
+  color: #ffffff;
+}
+.header .gnb_sub ul li a:hover {
+  color: #2F8DF8;
+  cursor: pointer;
+}
+.header .gnb_sub ul li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 12px;
+  background-color: #007aff; /* 구분선 색상 */
+}
+.header .headerInner h1{
+  margin: 20px auto 0 100px;
+} 
+.header .headerInner .gnb{
+  display: flex; 
+  margin: 35px auto; 
+  gap: 8rem;
+  padding-top: 30px;
+}
+.header .headerInner .gnb .dep1{font-size: 22px; color: #111; position: relative; cursor: pointer;}
+
+
+.header .headerInner .gnb .dep1 a:hover {color: #2F8DF8;}
+.header .headerInner .gnb .dep1 > span{font-family: 'SUIT'; font-weight: 600;}
+.header .headerInner .gnb .dep1 > .dep2{display:none ; position: absolute;  font-size: 18px; padding: 30px 0 75px; color: #111; font-family: 'SUIT'; font-weight: 400;}
+.header .headerInner .gnb .dep1 > .dep2 li:hover{color: #fff; text-decoration: underline; text-underline-offset: 3px;  text-decoration-thickness: 1px; text-decoration-color: #fff;}
+.header .headerInner .gnb .dep1:hover >.dep2{display: block; padding-top: 40px;}
+.header .headerInner .gnb .dep1 > .dep2 li + li{margin-top:25px;}
+
+.header .headerInner .utill{
+  display: flex; 
+  gap: 10px; 
+  margin: 45px 100px 0 auto ;
+}
+.header .headerInner .utill .menu,
+.header .headerInner .utill .shop {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 55px; 
+  height: 55px; 
+  border-radius: 50%; 
+  border: 3px solid #ffffff;
+}
+
+.header .headerInner .utill .shop .off, 
+.header .headerInner .utill .menu .off {
+  display: block;
+  width: 25px;
+  height: 28px;
+  color: #fff;
+}
+
+
+
+.header .headerInner .utill .shop .on {display: none;}
+.header .headerInner .utill .menu .on {display: none;}
+
+
+/*header fixed*/
+.header.fixed {background-color: #fff;}
+.header.fixed .gnb_sub ul li {
+  color: #2F8DF8;
+}
+.header.fixed .logo .off {display: none;}
+.header.fixed .logo .on {display: block;}
+.header.fixed .headerInner .gnb .dep1 {color: #000;}
+.header.fixed .headerInner .gnb .dep1 > .dep2 li {color: #000;}
+.header.fixed .headerInner .utill a, .header.fixed .headerInner .utill button  {border-color: #2F8DF8;}
+.header.fixed .headerInner .utill .shop .off {display: none;}
+.header.fixed .headerInner .utill .shop .on {display: block;}
+.header.fixed .headerInner .utill .menu .off {display: none;}
+.header.fixed .headerInner .utill .menu .on {display: block;}
+
+
+.header.fixed.on {background-color: transparent;}
+.header.fixed.on .headerInner .gnb .dep1 {color: #000;}
+
+.header.on {overflow: unset;}
+.header.on .logo .off {display: none;}
+.header.on .logo .on {
+  display: block;
+  width: 75px;
+  height: 112px;
+}
+.header.on .gnb_sub ul li { color: #2F8DF8;}
+.header.on .headerInner .gnb .dep1 {color: #000; }
+.header.on .headerInner .gnb .dep1:hover {color: #2F8DF8;}
+.header.on .headerInner .gnb .dep1 > .dep2 li {color: #000;}
+.header.on .headerInner .gnb .dep1 > .dep2 li:hover {color: #2F8DF8;}
+.header.on .headerInner .utill a, .header.on .headerInner .utill button  {border-color: #2F8DF8;}
+.header.on .headerInner .utill .shop .on {display: block;}
+.header.on .headerInner .utill .shop .off {display: none;}
+.header.on .headerInner .utill .menu .on {display: block;}
+.header.on .headerInner .utill .menu .off {display: none;}
+
+.membership_bg {
+  position: relative;
+  width: 1440px;
+  height: 566px;
+  background: url(../images/membership_bg.png) no-repeat center / cover;
+}
+
+.membership {
+  width: 100%; 
+  height: 1155px;
+  margin: 0 auto; 
+  background-color: #111;
+  position: relative;
+  overflow: hidden;
+}
+.membership_content {
+  max-width: 1440px;
+  width: 100%;
+  height: 1155px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+
+/* footer */
+.footer{background: #2F8DF8; position: relative; /*margin-top: 200px;*/}
+.footer_inner{max-width:1440px; margin: 0 auto; padding: 60px 0 60px; display: flex;}
+.footer_inner .flogoTel .ftel{margin-top: 15px;}
+/* ㅂㅁㅈ - 폰트 패밀리 'SUIT' -> 'Pretendard' 변경 */
+.footer_inner .flogoTel .ftel p{font-size: 20px; color: #fff; line-height: 1 ; font-family: 'Pretendard'; font-weight: 300;}
+/* ㅂㅁㅈ - 푸터 폰트 색 #f1054d -> #fff, 폰트 패밀리 'Montserrat' -> 'Pretendard' 변경 */
+.footer_inner .flogoTel .ftel p span{color: #fff; font-size: 20px; vertical-align: middle; font-family: 'Pretendard'; }
+.footer_inner .finfo{margin: 0 auto; margin-left: 20%;}
+/* ㅂㅁㅈ - margin-top 추가 */
+.footer_inner .finfo .link{ display: flex; margin-top: 66px; }
+.footer_inner .finfo .link div{ margin-right: 39px; }
+.footer_inner .finfo .link div:nth-last-of-type(1){margin-right:0;}
+/* ㅂㅁㅈ - 폰트 패밀리 'SUIT' -> 'Pretendard' 변경 */
+.footer_inner .finfo .link div a{color: #fff; font-size: 20px; font-family: 'Pretendard'; font-weight: 200;}
+.footer_inner .finfo .address{margin-top: 20px;}
+/* ㅂㅁㅈ - 푸터 폰트 색 #999 -> #fff 변경 */
+.footer_inner .finfo .address > div{ color: #fff; font-size : 16px; font-family: 'SUIT'; font-weight: 200;}
+.footer_inner .finfo .address > div.name{color: #fff;  font-weight: 300; font-family: 'Pretendard'; font-size: 10px;}
+.footer_inner .finfo .address > div.name span {font-family: 'kdg_Medium'; font-size: 20px; margin-right: 4px;}
+/* ㅂㅁㅈ - 푸터 폰트 색 #999 -> #fff 변경 */
+.footer_inner .finfo .copy{margin-top: 40px; color: #fff; font-size: 18px; font-weight: 100;}
+.footer_inner .fsns{margin: 0 auto; display: flex; gap: 10px;}
+.footer_inner .fsns div a i { font-size: 23px; color: #2F8DF8; background-color: #fff; border-radius: 30px; padding: 10px;}
+.footerForm{position: fixed; bottom: 0; width: 100%; z-index:100;}
+.footerForm .formTit{display: flex; align-items: center; justify-content: center;background: #dd1a32; border-radius: 44px 44px 0 0; height: 84px; text-align: center; line-height: 84px; font-size: 30px; color: #fff; cursor: pointer;}
+.footerForm .formTit img{margin-right: 15px; }
+.footerForm .formTit *{transition: all 0.3s;}
+.footerForm form{display: none; background: #dd1a32;  justify-content: center; padding-bottom: 20px;}
+.footerForm.on form{display: flex; font-family: 'Pretendard'; font-weight: 600;}
+.footerForm.on .formTit img{transform: rotate(180deg);}
+.footerForm.on .formTit span{display: none;}
+.footerForm form fieldset{ margin: 0 auto; display: flex;}
+.footerForm form fieldset > .tit{font-size: 50px; width: 100px; line-height: 1; color: #fff; margin-right: 35px; font-family: 'Pretendard'; font-weight: 600;}
+.footerForm form fieldset .form{padding: 0 35px 0 0;}
+.footerForm form fieldset .form .qType{display: flex; font-size: 18px; margin-bottom: 15px;}
+.footerForm form fieldset .form .qType .tit{color: #fff; margin-right: 15px;  font-family: 'Pretendard'; font-weight: 600;}
+.footerForm form fieldset .form .qType .rWrap{display: flex;}
+.footerForm form fieldset .form .qType .rWrap div{color: #fff; margin-right: 10px;  font-family: 'Pretendard'; font-weight: 200;}
+.footerForm form fieldset .form .qType .rWrap input[type=radio]{margin-right: 5px; border: 1px solid #fff; background: transparent;}
+.footerForm form fieldset .form .formTxt{display: flex; gap: 10px;}
+.footerForm form fieldset .form .formTxt > div{width: 276px;}
+.formTxt_inner textarea,
+.formTxt_inner > div input[type=text]{width: 100%; height: 40px; border: 0; border-radius: 7px; padding: 0 10px;}
+.formTxt_inner > .column2 {display: flex; gap: 10px; margin-bottom:10px}
+.formTxt_inner textarea{padding: 10px; height: 90px;}
+.footerForm form fieldset .formChk{width: 276px; color: #fff; margin-right: 35px;}
+.footerForm form fieldset .formChk .tit{ margin-bottom: 15px; font-size: 18px; font-family: 'Pretendard'; font-weight: 600;}
+.footerForm form fieldset .formChk .captcha{display: flex; border-radius: 7px; overflow: hidden; height: 40px; width: 100%; background: #fff;}
+.footerForm form fieldset .formChk .captcha .code{width: 50%; background: #333; color: #fff; height: 40px; line-height: 40px; border-radius: 7px; text-align: center; font-size: 18px; font-family: 'SUIT'; font-weight: 600;}
+.footerForm form fieldset .formChk .captcha input[type=text]{width: 50%; height: 40px; border: 0; padding: 0 10px;}
+.footerForm form fieldset .formChk .agree {font-size: 16px; margin-top:20px; font-family: 'Pretendard'; font-weight: 200;}
+.footerForm form fieldset .formChk .agree a{text-decoration: underline; text-underline-offset: 4px; font-weight: 600;}
+
+.footerForm form fieldset .formBtn{display: flex; align-items: end;}
+.footerForm form fieldset .formBtn button{background: #333; color: #fff; font-size: 24px; width: 126px; height: 92px; display: flex; align-items: center; justify-content:center; border-radius: 7px; font-family: 'Pretendard'; font-weight: 600;}
+
+/* ㅂㅁㅈ - 양쪽 여백 잡음 */
+@media(max-width: 1440px) {
+    .footer_inner {margin : 0 80px;} 
+}

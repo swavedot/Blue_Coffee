@@ -1,0 +1,136 @@
+
+/* //비주얼부분 */
+
+.sub_visual.sub01{background: url(../images/sub_pg/svisual_01.png) no-repeat center / cover !important;}
+.sub_visual.sub02{background: url(../images/sub_pg/svisual_02.png) no-repeat center / cover !important;}
+.sub_visual.sub03{background: url(../images/sub_pg/svisual_03.png) no-repeat center / cover !important;}
+.sub_visual.sub04{background: url(../images/svisual_04.png) no-repeat center / cover;}
+.sub_visual.sub05{background: url(../images/svisual_05.png) no-repeat center / cover;}
+.sub_visual.sub06{background: url(../images/svisual_06.png) no-repeat center / cover;}
+.sub_visual.sub07{background: url(../images/svisual_05.png) no-repeat center / cover;}
+
+
+
+.sub_contents{max-width: 1440px;width: 100%; margin: 0 auto; padding: 0 20px;}
+.sub_contents.wp100{width: 100%; max-width: 100%;}
+
+.subConTop{text-align: center; margin-top: 80px; margin-bottom: 40px;}
+.subConTop .title{font-size: 36px; color: #000;  font-family: 'SUIT'; font-weight: 600;}
+.subConTop .desc{margin-top: 20px; color: #666;  font-family: 'SUIT'; font-weight: 200;}
+
+
+
+.shopProc{width: 1100px; font-size: 0; margin: 0 auto; display: flex; justify-content: space-between;}
+.shopProc .procBox{width: 200px; }
+.shopProc .procBox .circle{width: 200px; height: 200px; font-size: 24px; border-radius: 50%; border: 1px solid #dd1a32; display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative;  font-family: 'SUIT'; font-weight: 600;}
+.shopProc .procBox .circle img{margin-bottom: 15px;}
+.shopProc .arrow {
+    padding-top: 90px;
+}
+/* .shopProc .procBox .circle::after{content: url(../images/icon_proc_arrow.png); position: absolute; right: -33%;} */
+.shopProc .procBox.end .circle{background: #dd1a32; color: #fff;}
+.shopProc .procBox.end .circle::after{display: none;}
+.shopProc .procBox .txt{ color: #333; font-size: 18px; text-align: center; margin-top: 30px;  font-family: 'SUIT'; font-weight: 200;}
+
+.shopInForm{width: 560px; margin: 0 auto;}
+.shopInForm .rowBox + .rowBox{margin-top:45px}
+.shopInForm .rowBox .t{font-size: 22px; color: #000; display: block; margin-bottom: 15px; font-family: 'SUIT'; font-weight: 600;}
+.shopInForm .rowBox input[type=text],
+.shopInForm .rowBox textarea{width: 100%; height: 55px; border-radius: 10px; border: 1px solid #ccc; padding: 8px;}
+.shopInForm .formBtn button{ width: 100%; height: 55px; border-radius: 10px; line-height: 55px; font-family: 'SUIT'; font-weight: 600; background: #dd1a32; text-align: center; color: #fff; font-size: 22px;}
+.shopInForm .rowBox .qtype{display: flex;}
+.shopInForm .rowBox .qtype div{margin-right: 10px;}
+.shopInForm .rowBox .qtype div label{font-size: 18px; font-family: 'SUIT'; font-weight: 200;}
+.shopInForm .rowBox .qtype input[type=radio]{margin-right: 5px; border: 1px solid #fff; background: transparent;}
+.shopInForm .rowBox .qtype input[type=radio]::before{display:block; content:''; position:absolute;  width:18px; height:18px; cursor:pointer; background: #fff; border: 1px solid #ccc; border-radius: 50%;}
+.shopInForm .rowBox .qtype input[type=radio]:checked::after{display:block; content:''; top: 3px; left: 3px; position:absolute; width:14px; height:14px; z-index:2; background: #dd1a32; border-radius: 50%;}
+.shopInForm .rowBox .captcha{display: flex; border-radius: 7px; overflow: hidden; height: 55px; width: 100%; background: #fff; border:  1px solid #ccc;}
+.shopInForm .rowBox .captcha .code{width: 50%; background: #000; color: #fff; height: 55px; line-height: 55px; border-radius: 7px; text-align: center; font-size: 18px;}
+.shopInForm .rowBox .captcha input[type=text]{width: 50%; height: 55px; border: 0; padding: 0 10px;}
+.shopInForm .rowBox.formChk {font-size: 18px; margin: 20px 0 50px; font-family: 'SUIT'; font-weight: 200;}
+.shopInForm .rowBox.formChk input[type=checkbox]:before{display:block; content:''; position:absolute; width:18px; height:18px; z-index:2; cursor:pointer; background: #fff; border: 1px solid #ccc; border-radius: 5px;}
+.shopInForm .rowBox.formChk input[type=checkbox]:checked:after{display:block; content:''; position:absolute;     width: 14px;
+    height: 14px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%; z-index:2; background: #dd1a32; border-radius: 5px; }
+.shopInForm .rowBox.formChk a{text-decoration: underline; text-underline-offset: 4px; color: #333; font-family: 'SUIT'; font-weight: 600;}
+
+
+
+
+
+
+.map_wrap{width: 100%; position: relative;}
+.map_wrap .mapArea{width: 100%;}
+.map_wrap .mapArea .map {height: 68rem;}
+.map_wrap .mapInfo{position: absolute;bottom: -20%;right: 10%;
+z-index: 2;}
+.map_wrap .mapInfo .mapInfo_txt{ display: flex; align-items: center; justify-content: center; position: relative;}
+.map_wrap .mapInfo .mapInfo_txt .txt{ color: #fff; position: absolute; margin-top: -50px;}
+.map_wrap .mapInfo .mapInfo_txt .txt p{ font-size: 18px; font-family: 'SUIT'; font-weight: 200; display: flex;}
+.map_wrap .mapInfo .mapInfo_txt .txt p + p{margin-top: 8px;}
+.map_wrap .mapInfo .mapInfo_txt .txt p span{ font-weight: 600; width: 50px;}
+.map_wrap .mapInfo .mapInfo_txt .txt p.name{ font-size: 30px; font-weight: 600; margin-bottom: 30px;}
+.map_wrap .mapInfo .mapInfo_txt .txt p.mail {display: block;  margin-top: 30px;}
+.map_wrap .mapInfo .mapInfo_txt .txt p.mail span{display: block; width: 100%;}
+
+
+.storeSch {margin-bottom: 100px;}
+.storeSch form fieldset{display: flex; justify-content: center; gap:10px }
+.storeSch .schBox {width: auto; height: 60px; border-radius: 30px; border: 1px solid #ddd; overflow: hidden;}
+.storeSch .schBox.sel{background: url(../images/icon_select_arrow.png) no-repeat right 30px center;}
+.storeSch .schBox select{width: 300px; appearance: none; background: transparent;}
+.storeSch .schBox input[type=text]{width: 420px;}
+.storeSch .schBox select,
+.storeSch .schBox input[type=text]{border: none; height: 60px; line-height: 60px; padding: 0 30px; font-size: 19px;}
+.storeSch form fieldset button{width: 92px; height: 60px; background: #dd1a32 url(../images/icon_stop_sch.png) no-repeat center; border-radius: 30px;} 
+ 
+.storeList{border-top:1px solid #333; border-bottom:1px solid #333;  }
+.storeList .row{padding: 30px 0; position: relative;}
+.storeList .row + .row{border-top:1px solid #e8e8e8}
+.storeList .row .info{ line-height: 1; }
+.storeList .row .info .name{font-size: 36px; font-family: 'SUIT'; color: #000; font-weight: 600;}
+.storeList .row .info .address{font-size: 18px; font-weight: 300x; margin: 15px 0;}
+.storeList .row .info .etc{display: flex; font-size: 18px; font-weight: 600; color: #666; gap: 20px; margin-left: 20px;}
+.storeList .row .info .etc > div{display: flex; align-items: center; gap: 10px;}
+.storeList .row .info .etc > .time{}
+.storeList .row .btn{position: absolute; right: 0; top: 60px;}
+.storeList .row .btn button{width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #333;}
+.storeList .row .btn.on button{ background: #dd1a32;}
+.storeList .row .btn.on button img{transform: rotate(180deg);}
+.storeList .row .btn.on + .map{display: block;}
+.storeList .row .map{display: none; border-top:1px solid #e8e8e8; margin-top: 30px; padding-top: 35px; }
+.loca {
+    width: 100%;
+    height: 530px;
+    position: relative;
+}
+
+.menuTab{display: flex; justify-content: center; margin-bottom: 80px;}
+.menuTab > div{display: flex; align-items: center; color: #333; font-family: 'Geometos'; justify-content: center; width: 180px; height: 50px; border-radius: 25px; font-size: 19px; line-height: 1; cursor: pointer; }
+.menuTab > div.active{background: #dd1a32; color: #fff; }
+
+
+.menuList{display: flex; flex-wrap: wrap; gap: 4%;}
+
+.menuList .item{flex-basis: 22%; margin-bottom: 80px; text-align: center;  }
+.menuList .item .img{width: 100%; margin-bottom: 50px;}
+.menuList .item .img img{width: 100%; }
+.menuList .item .titKo{font-size: 33px; color: #000; font-weight: 600;}
+.menuList .item .titEn{font-size: 18px; color: #333;  font-weight: 200;}
+.menuList .item .desc{font-size: 20px; color: #333; margin-top: 25px; font-weight: 200;}
+
+
+.brandHistory{margin-bottom: 200px;}
+.brandHistory .row{display: flex; justify-content: center; gap: 130px;}
+.brandHistory .row + .row{margin-top: 150px;}
+.brandHistory .row .img{position: relative; width: 500px; text-align: right;}
+.brandHistory .row .img::before{content: url(../images/logo_svis.png);  position: absolute; right: -97px; z-index: 1; }
+.brandHistory .row .img::after{content: ""; width: 1px; height: calc(100% + 150px); background: #dd1a32; position: absolute; right: -75px; }
+.brandHistory .row:nth-last-child(1) .img::after{display: none;}
+
+.brandHistory .row .txt{ line-height: 1; width: 500px; text-align: left;}
+.brandHistory .row .txt .year{font-size: 48px; font-family: 'gmarket'; color:#dd1a32; font-weight: 600;  margin-bottom: 30px;}
+.brandHistory .row .txt .desc{}
+.brandHistory .row .txt .desc p{ color: #333; font-size: 18px; font-family: 'SUIT'; font-weight: 200; margin-bottom: 10px;}

@@ -1,0 +1,4 @@
+div.fotorama__nav--dots div.fotorama__nav__frame { width: 14px; margin: 0 10px 28px }
+div.fotorama__nav-wrap { position: absolute; bottom: 0; left: 0; z-index: 1000 }
+div.fotorama__dot { width: 14px; height: 14px; border-radius: unset; border: none; background: url(/images/sub_pg/paging.png) 0 0 no-repeat }
+div.fotorama__nav__frame.fotorama__active div.fotorama__dot { width: 14px; height: 14px; background-position: 0 -14px }
