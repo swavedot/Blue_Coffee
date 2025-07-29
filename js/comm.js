@@ -6,13 +6,14 @@ $(function(){
 			$('#header').removeClass('scroll');
 		}
 	});
+	
 	if( $(window).scrollTop() > 0){
 		$('#header').addClass('scroll');
 	}else{
 		$('#header').removeClass('scroll');
 	}
 
-	$('.btn_menu.open').click(function(){
+	$('.menu').click(function(){
 		$('.menu_wrap').fadeIn(200);
 		$('.menu_wrap').addClass('on');
 		$('html, body').css({
@@ -23,7 +24,7 @@ $(function(){
 	$('.btn_menu.close').click(function(){
 		$('.menu_wrap').fadeOut(200);
 		$('.menu_wrap').removeClass('on');
-		$('#header #gnb > li > a').removeClass();
+		$('#headerwrap #gnb > li > a').removeClass();
 		$('#gnb .dep02').stop().hide();
 		$('html, body').css({
 			'overflow' : ''

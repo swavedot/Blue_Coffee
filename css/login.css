@@ -1,0 +1,211 @@
+@font-face {
+  font-family: 'KCCHyerim-Regular';  
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/KCCHyerim-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hid {
+  position: absolute;
+  left: -9999px;
+  font-size: 0;
+  width: 0;
+  height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.new_login_ttl {
+  color: #fff;
+  display: block;
+  font-size: 30px;
+  font-weight: normal;
+  margin-bottom: 30px;
+  text-align: center;
+  margin-top: 111px;
+}
+.renew_joinform_v2 {
+  border-radius: 3px;
+  box-sizing: border-box;
+  max-width: 570px;
+  margin: 0 auto;
+  position: relative;
+}
+.top_form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.renew_joinform_v2 img {
+  width: 40px;
+}
+.find_form_txt {
+  display: flex;
+  flex-direction: column;
+  color: #777;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  text-align: start;
+  padding-top: 4rem;
+  padding-left: 1rem;
+}
+.t_006633 {
+  font-family: 'Pretendard-Regular';
+  font-weight: bold;
+  line-height: 100%;
+  font-size: 25px;
+  color: #333 !important;
+}
+.find_form_txt .sub{ font-size: 15px;}
+.for_mob { display: none !important;}
+.bd_none { border: 0 !important;}
+.renew_input_box {
+  background: #fff;
+  border-bottom: 2px solid #ddd;
+  padding: 20px 20px;
+  position: relative;
+}
+.renew_input_box input {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: inline-block;
+  /* margin-top: 10px; */
+  max-width: 530px;
+  /* outline: none; */
+  padding: 15px;
+  width: 100%;
+  background-color: #F1F1F1;
+  font-size: 14px;
+  font-weight: 600;
+  color:#9A9A9A;
+}
+.limit_txt {
+  color: #444;
+  display: none;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+.checkWrap {
+  display: flex;
+}
+.checkmark-icon {
+  width: 26px; /* 이미지 크기 조절 (원하는 대로 변경) */
+  height: 26px;
+  cursor: pointer; /* 마우스 오버 시 손가락 모양으로 변경 */
+}
+.id_save {
+  text-align: center;
+  margin-top: 4px;
+}
+
+.renew_input_box .btn_mem_login {
+  margin: 0;
+  margin-top: 1rem;
+}
+.btn_mem_login {
+  background-color: #333;
+  border-radius: 10px;
+  margin-top: 25px;
+  text-align: center;
+  margin: 0 20px;
+  max-width: 570px;
+}
+.btn_mem_login:hover {
+  background-color: #2F8DF8;
+}
+.btn_mem_login a {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  display: block;
+  line-height: 50px;
+}
+.login_btn_wrap {
+  background: #fff;
+  box-sizing: border-box;
+  max-width: 570px;
+}
+.login_btn_wrap ul {
+  display: table;
+  margin-top: 2rem;
+  text-align: center;
+  width: 100%;
+}
+.login_btn_wrap ul li {
+  box-sizing: border-box;
+  float: left;
+  position: relative;
+  vertical-align: top;
+  width: 33.3%;
+}
+.login_btn_wrap ul li.last {
+  float: right;
+}
+.login_btn_wrap ul li a {
+  color: #666;
+  display: block;
+  font-size: 14px;
+  height: 100%;
+  line-height: 54px;
+  width: 100%;
+}
+.login_btn_wrap ul li a:hover {
+  color: #2F8DF8;
+}
+
+
+.login_btn_wrap ul li:after {
+  border-right: 1px solid #ddd;
+  color: #666;
+  content: "";
+  height: 22px;
+  margin-top: -11px;
+  position: absolute;
+  right: -1px;
+  top: 50%;
+}
+.login_btn_wrap ul:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.login_btn_wrap ul li.last:after {
+  border-right: 0;
+}
+
+@media (max-width: 375px) {
+  .find_form_txt {
+    font-size: 16px;
+}
+.renew_input_box input {
+  padding: 10px;
+}
+.renew_input_box {
+  padding: 15px;
+}
+.find_mem_wrap {
+  padding: 50px 15px 40px;
+}
+.btn_mem_login a {
+  line-height: 45px;
+  font-size: 20px;
+}
+.renew_joinform_v2 {
+  padding: 0;
+  margin-bottom: 20px;
+}
+.renew_joinform_v2 {
+  margin-bottom: 60px;
+  padding: 5% 5%;
+  width: 100%;
+  border: 0px;
+}
+}

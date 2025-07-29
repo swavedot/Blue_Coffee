@@ -1,4 +1,4 @@
-.inner{ width: 90%; max-width: 1500px; margin: 0 auto; }
+.inner{ max-width: 1500px; margin: 0 auto; }
 
     
 /* sub */
@@ -442,21 +442,16 @@
   margin-top: 32px;
 }
 /* 마지막 본문 부분 */
-    @media screen and (min-width: 1440px) {
-    .sub_contents .inner > .titBox {
-      text-align: center;
-      margin-bottom: 100px;
-    }
     .sub_contents .inner .cont > h3 {
-      font-size: 37px;
+      font-size: 26px;
       font-weight: 700;
       color: #00263C;
       letter-spacing: 0px;
-      line-height: 51px;
+      line-height: 140%;
       text-align: center;
       opacity: 1;
       margin-top: 60px;
-      }
+    }
     .sub_contents .sub_contents inner > .titBox > h2, .sub_page.sub2 .inner > .titBox > h2 {
       letter-spacing: -2px;}
     .sub_contents .inner .cont {
@@ -472,18 +467,18 @@
       border-radius: 32px;
     }
     .sub_contents .inner .cont p.p01 {
-      font-size: 36px;
+      font-size: 26px;
       line-height: 35px;
       animation-delay: 0.5s;
       margin-top: 30px;
     }
     .sub_contents .inner .cont p strong {
-      font-size: 48px;
+      font-size: 35px;
       font-family: 'kdg_Medium';
     }
     .sub_contents .inner .cont p.p02 {
       font-size: 25px;
-      line-height: 38px;
+      line-height: 140%;
       animation-delay: 0.9s;
       margin-top: 0px;
       color: #9A9A9A;
@@ -498,7 +493,6 @@
 .is-tablet-hide {
   display: block;
 }
-    }
 
 
 @media (max-width: 800px) {

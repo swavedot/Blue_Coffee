@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta name="naver-site-verification" content="65632f99b6942019b265bc5e0b1b1e05a014d64d" />
-  <meta name="google-site-verification" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+	<!-- Naver Webmaster Tool -->
+	<meta name="naver-site-verification" content="65632f99b6942019b265bc5e0b1b1e05a014d64d" />
+	<!-- Google Search Console -->
+	<meta name="google-site-verification" content="" />
 
-  <title>푸른餘</title>
+    <title>푸른餘</title>
+<!-- Favicon -->
+<link rel="icon" type="png" sizes="16x16" href="./images/favicon-16X16.png">
+<link rel="icon" type="png" sizes="32x32" href="./images/favicon-32X32.png">
+<link rel="icon" type="png" sizes="48x48" href="./images/favicon-48X48.png">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../font/xeicon/xeicon.css" />
-  <link rel="stylesheet" href="./css/layout.css">
-  <link rel="stylesheet" href="../css/contents.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/responsive.css">
-  <link rel="stylesheet" href="../css/board.css">
-  <link rel="stylesheet" href="./css/comm.css">
+<!-- CSS -->
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./font/xeicon/xeicon.css" />
+<link rel="stylesheet" href="./css/layout.css">
+<link rel="stylesheet" href="./css/signature.css">
+<link rel="stylesheet" href="./css/contents.css">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/board.css">
+<link rel="stylesheet" href="./css/comm.css">
 
-  <!-- JS -->
-  <script src="../js/jquery.js"></script>
-  <script src="./js/ui.js"></script>
-  <script src="../js/com.js"></script>
-  <script src="./js/main.js"></script>
+<!-- JS -->
+<script src="./js/jquery.js"></script>
+<script src="./js/ui.js"></script>
+<script src="./js/comm.js"></script>
+<script src="./js/signature.js"></script>
 
-  <!-- 플러그인 -->
-  <link rel="stylesheet" href="../js/plugin/swiper/swiper.css">
-  <script src="../js/plugin/swiper/swiper.js"></script>
-  <link rel="stylesheet" href="../js/plugin/aos/aos.css">
-  <link rel="stylesheet" href="../js/plugin/aos/animate.css">
-  <script src="../js/plugin/aos/aos.js"></script>
-  <script src="../js/jquery.magnific-popup.min.js"></script>
-  <script src="../js/jquery-ui.min.js"></script>
+<!-- 플러그인 -->
+<link rel="stylesheet" href="../js/plugin/swiper/swiper.css">
+<script src="../js/plugin/swiper/swiper.js"></script>
+<link rel="stylesheet" href="../js/plugin/aos/aos.css">
+<link rel="stylesheet" href="../js/plugin/aos/animate.css">
+<script src="../js/plugin/aos/aos.js"></script>
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
 
-  <!-- 폰트 아이콘 -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
- </head>
+<!-- 폰트 아이콘 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+
+</head>
 
   <!-- html  -->
  <body>
   <header class="header">
-    <nav class="gnb_sub">
-      <ul>
-        <li><a href="#">멤버십 로그인</a></li>
-        <li><a href="#">멤버십 가입</a></li>
-      </ul>    
-    </nav>
-
     <!-- 로고 및 메인 메뉴 -->
     <div class="headerInner">
       <h1 class="logo">
@@ -63,7 +65,7 @@
        <!-- 메인 GNB -->
       <nav class="gnb">
             <div class="dep1">
-                <span><a href="/brand.html">브랜드 소개</a></span>
+                <span><a href="#">브랜드 소개</a></span>
                 <ul class="dep2">
                     <li><a href="/brand.html">머무는 가치</a></li>
                     <li><a href="/history.html">걸어온 길</a></li>
@@ -73,16 +75,16 @@
             <div class="dep1">
                 <span><a href="#">메뉴</a></span>
                 <ul class="dep2">
-                    <li><a href="/시그니처.html">시그니처</a></li>
-                    <li><a href="/커피.html">커피</a></li>
-                    <li><a href="/라떼.html">라떼</a></li>
-                    <li><a href="/에이드-주스.html">에이드/주스</a></li>
-                    <li><a href="/티-아이스티.html">티/아이스티</a></li>
-                    <li><a href="/요거트스무디.html">요거트스무디</a></li>
+                  <li><a href="/signature.html">시그니처</a></li>
+                  <li><a href="/coffee.html">커피</a></li>
+                  <li><a href="/latte.html">라떼</a></li>
+                  <li><a href="/ade-juice.html">에이드/주스</a></li>
+                  <li><a href="/tea-Icetea.html">티/아이스티</a></li>
+                  <li><a href="/yogurt.html">요거트스무디</a></li>
                 </ul>
             </div>
             <div class="dep1">
-                <span><a href="./member_1.html">멤버십</a></span>
+                <span><a href="#">멤버십</a></span>
                 <ul class="dep2">
                     <li><a href="./member_1.html">푸른餘멤버십</a></li>
                     <li><a href="./member_2.html">이용혜택</a></li>
@@ -92,27 +94,31 @@
             <div class="dep1">
                 <span><a href="#">공지사항</a></span>
                 <ul class="dep2">
-                    <li><a href="#">공지사항</a></li>
-                    <li><a href="#">이벤트</a></li>
+                    <li><a href="./notice_1.html">공지사항</a></li>
+                    <li><a href="./notice_2.html">이벤트</a></li>
                 </ul>
             </div>
             <div class="dep1">
                 <span><a href="#">매장안내</a></span>
                 <ul class="dep2">
-                    <li><a href="#">위치안내</a></li>
-                    <li><a href="#">공간소개</a></li>                    
+                    <li><a href="./information_1.html">위치안내</a></li>
+                    <li><a href="./information_2.html">공간소개</a></li>                    
                 </ul>
             </div>
       </nav>
       <div class="utill">
-        <a href="#" target="_blank" class="shop">
+        <a href="#" class="login">
+          <img src="./images/icon_top_login_white.svg" class="off" alt="로그인 화이트"/>
+          <img src="./images/icon_top_login.svg" class="on" alt="로그인 파랑"/>
+        </a>
+        <a href="#" class="shop">
           <img src="./images/icon_top_shop_white.svg" class="off" alt="장바구니 화이트"/>
           <img src="./images/icon_top_shop.svg" class="on" alt="장바구니 파랑"/>
         </a>
-        <button type="button" id="allMenu" class="menu">
+        <a href="#" class="menu">
           <img src="./images/icon_top_menu_white.svg" class="off" alt="메뉴 화이트"/>
           <img src="./images/icon_top_menu.svg" class="on" alt="메뉴 파랑"/>
-        </button>
+        </a>
       </div>
     </div>
     <div class="menuHover">
@@ -122,13 +128,11 @@
           </div>
         </div>
     </div>
-</header>
+  </header>
+    <!-- menu_wrap -->
     <!--  -->
-    <div id="header" class="">
-			
+    <div id="header" class="">		
 			<div class="inner">
-				
-				
 				<div class="menu_wrap" style="">
 					<div class="menu_bx">
 						<div class="top">
@@ -197,7 +201,7 @@
 				</div>
 			</div>
 		</div>
-    <!--  -->
+    <!--  --> 
 
     <!-- main_visual -->
     <section class="main_visual">
@@ -222,7 +226,7 @@
         </div>
         <div class="menu_button">
             <button class="brand_button">
-                <span class="text"><a href="/brand.html">브랜드 소개</a></span>
+                <span class="text"><a href="./brand.html">브랜드 소개</a></span>
                 <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
             </button>
         </div>
@@ -239,7 +243,7 @@
               <h2>푸른餘와 함께<span>‘푸른 한 잔, 길게 머무는 여운’</span></h2>
           </div>    
           <button class="brand_button">
-                <span class="text">자세히보기</span>
+                <span class="text"><a href="#"></a>자세히보기</span>
                 <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
           </button>
         </div>
@@ -274,13 +278,13 @@
           <h1>푸른餘情(여정)이 머무는 곳</h1>
           <p>
             “혼자서 잠시 쉬어가기 좋은 조용하고 감성적인<br> 
-             공간을 지향하며 급변하는 사회문화 속에서<br> 
-             잠시 여유를 가지고 쉼을 제공하는 공간”
+              공간을 지향하며 급변하는 사회문화 속에서<br> 
+              잠시 여유를 가지고 쉼을 제공하는 공간”
           </p>
         </div>
         <div class="space_btn">
           <button class="brand_button">
-            <span class="text">공간소개</span>
+            <span class="text"><a href="./information_2.html"></a>공간소개</span>
             <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
           </button>
         </div> 
@@ -312,7 +316,7 @@
           </p>
           <div class="membership_btn">
             <button class="brand_button">
-                <span class="text">푸른餘멤버십</span>
+                <span class="text"><a href="./member_1.html"></a>푸른餘멤버십</span>
                 <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
             </button>
           </div>
@@ -360,6 +364,70 @@
         </ul>
       </div>
     </footer>
+
+
+    <div class="login-overlay" id="loginOverlay">
+      <div class="login-modal">
+        <button class="close-login" aria-label="닫기">X</button>
+    
+        <!-- ✅ 기존 로그인 폼 삽입 -->
+        <div class="find_mem_inner">
+          <form id="frmLogin" action="https://www.starbucks.co.kr/login/login_proc.do" method="post">
+            <fieldset>
+              <section class="renew_joinform_v2">
+                <div class="top_form">
+                  <img src="./images/logo_blue.png" alt="로고 화이트">
+                  <p class="find_form_txt">
+                    <span class="t_006633">로그인</span>
+                    <span class="sub">푸른여에 오신 것을 환영합니다</span>
+                  </p>
+                </div>
+                <div class="renew_input_box bd_none">
+                  <input class="login_id mb10" id="txt_user_id" name="user_id" type="text" maxlength="20" placeholder="아이디를 입력해 주세요." required />
+                  <input class="login_pw mb10" id="txt_user_pwd" name="user_pwd" type="password" maxlength="20" placeholder="비밀번호를 입력해 주세요." required autocomplete="off" />
+                  <span class="checkWrap">
+                    <input type="checkbox" name="idRemb" id="idRemb" class="mem2">
+                    <label for="idRemb">아이디 저장</label>
+                  </span>
+                  <p class="btn_mem_login">
+                    <a class="btn_login" href="javascript:void(0);" role="submit">로그인</a>
+                  </p>
+                </div>
+                <div class="login_btn_wrap">
+                  <ul>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">아이디 찾기</a></li>
+                    <li class="last"><a href="#">비밀번호 찾기</a></li>
+                  </ul>
+                </div>
+              </section>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- login JS -->
+    <script>
+      const loginBtn = document.getElementById("loginBtn");
+      const overlay = document.getElementById("loginOverlay");
+      const closeBtn = document.querySelector(".close-login");
+    
+      loginBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        overlay.style.display = "flex";
+      });
+    
+      closeBtn.addEventListener("click", function () {
+        overlay.style.display = "none";
+      });
+    
+      overlay.addEventListener("click", function (e) {
+        if (e.target === overlay) {
+          overlay.style.display = "none";
+        }
+      });
+    </script>
 
  </body>
 </html>
