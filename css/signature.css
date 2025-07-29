@@ -263,7 +263,7 @@ ul.prod-list:nth-child(2) {
     width: 1024px;
   }
   .cont-box {
-    width: 1024px;
+    width: 1024px; 
   }
   /* 헤더 */
   .sub_title {

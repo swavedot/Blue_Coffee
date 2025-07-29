@@ -58,6 +58,11 @@
     font-size: 15px;
   }
 }
+@media all and (max-width:425px) {
+  .brand_button {
+    font-size: 12px;
+  }
+}
 
 
 body.fixed{overflow: hidden}
@@ -296,12 +301,12 @@ body.fixed{overflow: hidden}
   }
   .header .headerInner .utill {
     display: flex;
-    width: 45px;
-    margin: -4px 20px 0 auto;
   }
-  .header .gnb_sub {
-    padding: 5px 40px;
-  }
+  .header .headerInner .utill .login, 
+  .header .headerInner .utill .menu, 
+  .header .headerInner .utill .shop {
+    width: 35px;
+  }  
 }
 
 @media all and (max-width:768px) {
@@ -311,10 +316,18 @@ body.fixed{overflow: hidden}
   }
   .header .headerInner .utill {
     gap: 20px;
-    margin: 0px 56px;
+    margin-left: 50rem;
   }
   .header .headerInner .gnb {
     display: none;
+  }
+  
+}
+
+@media all and (max-width:425px) {
+  .header .headerInner .utill {
+    gap: 10px;
+    margin-left: 18rem;
   }
   
 }
@@ -323,6 +336,10 @@ body.fixed{overflow: hidden}
   .header .headerInner {
     width: 90%;
     margin: 0px -2px;
+  }
+  .header .headerInner .utill {
+    gap: 5px;
+    margin-left: 15rem;
   }
 }
 
@@ -370,6 +387,12 @@ body.fixed{overflow: hidden}
   }
 }
 
+@media all and (max-width:425px) {
+  .main_logo {
+    width: 35%;
+    height: 23rem;
+  }
+}
 @media all and (max-width:375px) {
   .main_logo {
     width: 32%;
@@ -508,6 +531,30 @@ body.fixed{overflow: hidden}
   }
 }
 
+@media all and (max-width:425px) {
+  .msection_content .menu_top {
+    display: none;
+  }
+  .msection_content .menu_img {
+    top: 4rem;
+  }
+  .msection_content .menu_title {
+    top: 45rem;
+  }
+  .msection_content .menu_title {
+    top: 43rem;
+    left: 5rem;
+  }
+  .msection_content .menu_title p {
+    text-align: start;
+  }
+  .msection_content .menu_img .menu_img_01 {
+    width: 200px;
+  } 
+  .msection_content .menu_button {
+    top: 62%;
+  }
+}
 @media all and (max-width:375px) {
   .msection_content .menu_img {
     top: 2rem;
@@ -730,6 +777,44 @@ body.fixed{overflow: hidden}
   }
 }
 
+@media all and (max-width:425px) {
+  .signature_top {
+    background-size: 220%;
+    background-position: 75% -56%;
+  }
+  .signature_logo {
+    display: none;
+  }
+  .signature_top .signature_top_title {
+    left: 3rem;
+    top: 11rem;
+  }
+  .signature_top .signature_top_title h1 {
+    font-size: 35px;
+  }
+  .signature_top .signature_top_title h2 {
+    font-size: 19px;
+  }
+  .signature_top .brand_button {
+    left: 8%;
+    top: 15rem;
+  }
+  .signature_bottom .signature_bottom_img {
+    top: -15rem;
+    left: -16rem;
+  }
+  .signature_bottom .signature_img_01 {
+    left: 44rem;
+  }
+  .signature_bottom .signature_img_03 {
+    left: 15rem;
+  }
+  .signature_bottom .signature_bottom_title {
+    top: 13rem;
+    right: 5rem;
+  }
+
+}
 @media all and (max-width:375px) {
   .signature_top {
     background-size: 214%;
@@ -740,11 +825,17 @@ body.fixed{overflow: hidden}
   }
   .signature_top .brand_button {
     top: 13rem;
-    left: 50%;
+    left: 52%;
   }
   .signature_top .signature_top_title {
     top: 10rem;
     left: 6rem;
+  }
+  .signature_top .signature_top_title h1 {
+    font-size: 35px;
+  }
+  .signature_top .signature_top_title h2 {
+    font-size: 17px;
   }
   .signature_bottom {
     height: 462px;
@@ -773,8 +864,8 @@ body.fixed{overflow: hidden}
     width: 108px;
   }
   .signature_bottom .signature_bottom_title {
-    right: 2rem;
-    top: -7rem;
+    right: 6rem;
+    top: -9rem;
   }
   .signature_bottom .signature_bottom_title h1 {
     font-size: 30px;
@@ -782,6 +873,10 @@ body.fixed{overflow: hidden}
   }
   .signature_bottom .signature_bottom_title h2 {
     font-size: 16px;
+  }
+  .signature_bottom .signature_bottom_img {
+    top: -28rem;
+    left: -7rem;
   }
 
 }
@@ -912,7 +1007,41 @@ body.fixed{overflow: hidden}
   .membership_content .membership_btn { top: 18rem; }
 }
 
+@media all and (max-width:425px) {
+  .membership_content .membership_img {
+    margin-left: 0rem;
+  }
+  .membership_content .membership_img .img_01 {
+    width: 180px;
+  }
+  .membership_content .membership_img .img_02 {
+    width: 180px;
+    top: -13rem;
+    left: 19rem;
+  } 
+  .membership_content .membership_text {
+    top: 27rem;
+    right: 12rem;
+  }
+  .membership_content .membership_text h1 {
+    font-size: 30px;
+  }
+  .membership_content .membership_text h2 {
+    font-size: 17px;
+  }
+  .membership_content .membership_text p {
+    font-size: 11px;
+    margin-top: 15px;
+  }
+  .membership_content .membership_btn {
+    top: 13rem;
+  }
+
+}
 @media all and (max-width:375px) {
+  .membership_content .membership_img {
+    margin-left: -2rem;
+  }
   .membership_content .membership_img .img_01 {
     width: 180px;
   }
@@ -1094,13 +1223,48 @@ body.fixed{overflow: hidden}
   .space_intro .space_intro_desc p { font-size: 14px;}
   .space_intro .space_btn { top: 39%; left: 13rem;}
   .space_intro .space_content { right: 589px;}
-  .space_intro .space_content .space_01{ width: 150px; height: 96px; top: -10px; left: 80px;}
+  .space_intro .space_content .space_01{ height: 96px; top: -10px; left: 10rem;}
   .space_intro .space_content .space_02{ width: 185px; top: -44px; left: 217px;}
-  .space_intro .space_content .space_03{ width: 150px; height: 220px; left: 389px; top: -132px;}
+  .space_intro .space_content .space_03{ width: 111px; height: 220px; left: 407px; top: -132px;}
   .space_intro .space_content .space_04{ width: 115px; top: 95px; left: 96px;}
   .space_intro .space_content .space_05{ width: 187px; top: 95px; left: 215px;}
   .space_intro .space_content .space_06{ width: 112px; height: 212px; top: 75px; left: 407px; }
   .space_intro .space_content .space_07{ width: 148px; top: -131px; right: -401px;}
+}
+
+@media all and (max-width:425px) {
+  .space_intro .space_content {
+    right: 52rem;
+    top: 30rem;
+  }
+  .space_intro .space_intro_desc {
+    margin-right: -13rem;
+    top: 7rem;
+  }
+  .space_intro .space_intro_desc p {
+    width: 300px;
+  }
+  .space_intro .space_btn {
+    top: 32%;
+    left: 10rem;
+  }
+  .space_intro .space_intro_title {
+    top: 4%;
+  }
+
+  .space_intro .space_intro_title h1 {
+    font-size: 30px;
+  }
+
+  
+
+  .space_intro .space_content .space_01{ width: 88px; height: 96px; top: 41px; left: 145px;}
+  .space_intro .space_content .space_02{ width: 143px; top: 25px; left: 239px;}
+  .space_intro .space_content .space_03{ width: 86px; height: 329px; top: -123px; left: 388px;}
+  .space_intro .space_content .space_04{ width: 90px; height: 141px; top: 129px; left: 144px;}
+  .space_intro .space_content .space_05{ width: 145px; top: 133px; left: 238px;}
+  .space_intro .space_content .space_06{ width: 86px; height: 212px; top: 94px; left: 388px; }
+  .space_intro .space_content .space_07{ width: 117px; top: -41px; right: -382px;}
 }
 
 @media all and (max-width:375px) {
@@ -1292,6 +1456,42 @@ body.fixed{overflow: hidden}
 
 }
 
+@media all and (max-width:425px) {
+  .flogoTel .flogo {
+    margin-left: 1rem;
+  }
+  .footer_inner .flogoTel .ftel {
+    margin-left: 2rem;
+  }
+  .footer_inner .flogoTel .ftel li {
+    font-size: 17px;
+  }
+  .footer_inner .flogoTel .ftel li span {
+    font-size: 17px;
+  }
+  .footer_inner .finfo .link {
+    margin-top: 35px;
+  }
+  .footer_inner .finfo .link li {
+    margin-right: 17px;
+  }
+  .footer_inner .finfo .link li a {
+    font-size: 15px;
+  }
+  .footer_inner .finfo .address {
+    margin-top: 4rem;
+  } 
+  .footer_inner .finfo .copy {
+    width: 300px;
+    font-size: 15px;
+    margin-top: 4rem;
+  }
+  .footer_inner .fsns {
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+}
+
 @media all and (max-width:375px) {
   .flogoTel .flogo {
     margin-left: 1rem;
@@ -1318,8 +1518,8 @@ body.fixed{overflow: hidden}
     margin-top: 4rem;
   }
   .footer_inner .finfo .copy {
-    font-size: 17px;
-    margin-top: 6rem;
+    font-size: 15px;
+    margin-top: 5rem;
   }
   .footer_inner .fsns {
     margin-top: 2rem;
