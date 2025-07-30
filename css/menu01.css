@@ -19,17 +19,17 @@
   flex-direction: column;
   gap: 10px;
   left: 10rem;
-  bottom: 7rem;
+  bottom: 10rem;
 }
 .sub_title .sub_title_text h1 {
   position: absolute;
   font-size: 50px;
   font-weight: 400;
   color: #fff;
-  bottom: 3rem;
+  bottom: 4rem;
 }
 .sub_title .sub_title_text p {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 300;
   color: #fff;
 }
@@ -42,15 +42,15 @@
   text-align: center;
 }
 .sub_menu li a {
-  width: 200px;
-  height: 40px;
-  padding: 8px 10px;
+  width: 208px;
+  height: 60px;
+  padding: 18px 10px;
   color: #fff;
   font-size: 18px;
-  background-color: rgba(0, 38, 60, 0.7);
+  background-color: rgba(0, 38, 60, 0.6);
 }
 .sub_menu li .active {
-  background-color: rgba(47, 141, 248, 0.7);;
+  background-color: rgba(47, 141, 248, 0.6);
 }
 /* sub-end */
 /* 이미지 */
@@ -651,9 +651,15 @@ a.btn-lg, button.btn-lg {
   display: inline-block;
   transition: transform 0.3s ease;
 }
+.arrow-icon:hover {
+  color: #2F8DF8;
+}
 
 .fold-item.active .arrow-icon {
   transform: rotate(180deg);
+}
+.fold-item.active .arrow-icon:hover {
+  color: #2F8DF8;
 }
 
 .fold-content {

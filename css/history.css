@@ -1,10 +1,3 @@
-@font-face {
-  font-family: 'kdg_Medium'; /* 내가 지을 수 있는 이름 */
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/kdg_Medium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 
 #container {
   /* margin-top: 72px */
@@ -1247,7 +1240,7 @@
 /* sub */
 .sub_title {
   width: 100%;
-  background: url(../images/svisual_02.png) no-repeat center /cover ;
+  background: url(../images/svisual_01.png) no-repeat center /cover ;
 }
 .sub_title_content {
   position: relative;
@@ -1265,17 +1258,17 @@
   flex-direction: column;
   gap: 10px;
   left: 10rem;
-  bottom: 7rem;
+  bottom: 10rem;
 }
 .sub_title .sub_title_text h1 {
   position: absolute;
   font-size: 50px;
   font-weight: 400;
   color: #fff;
-  bottom: 3rem;
+  bottom: 4rem;
 }
 .sub_title .sub_title_text p {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 300;
   color: #fff;
 }
@@ -1288,15 +1281,15 @@
   text-align: center;
 }
 .sub_menu li a {
-  width: 200px;
-  height: 40px;
-  padding: 8px 10px;
+  width: 208px;
+  height: 60px;
+  padding: 18px 10px;
   color: #fff;
   font-size: 18px;
-  background-color: rgba(0, 38, 60, 0.7);
+  background-color: rgba(0, 38, 60, 0.6);
 }
 .sub_menu li .active {
-  background-color: rgba(47, 141, 248, 0.7);;
+  background-color: rgba(47, 141, 248, 0.6);;
 }
 /* sub-end */
 
@@ -1346,7 +1339,20 @@
   }
 }
 
-
+.title-h3 {
+  font-size: 27px;
+  font-weight: 400;
+  color: #00263C;
+  line-height: 1.5;
+  flex-grow: 1;
+  text-align: center;
+  padding-right: 975px;
+  font-family: 'Pretendard';
+}
+.title-h3 span {
+  font-size: 30px;
+  font-family: 'kdg_Medium';;
+}
 @media (max-width: 1023px) {
   .title-h3 {
       font-size:32px
@@ -3833,7 +3839,11 @@
   }
 }
 
-
+@media (max-width: 897px) {
+  .box-gray-complete .title-h3 {
+      font-size:20px
+  }
+}
 
 .box-gray-complete .text-center {
   margin-top: 32px;
@@ -4305,7 +4315,6 @@
 .section-history-list {
   position: relative;
   overflow: hidden;
-  max-width: 1440px;
   height: auto;
   top: inherit;
   /* margin: 120px 0; */
@@ -4326,11 +4335,6 @@
   margin-top: 100vh
 }
 
-@media (max-width: 897px) {
-  .box-gray-complete .title-h3 {
-      font-size:20px
-  }
-}
 @media (max-width: 1023px) {
   .section-history-list {
       margin:80px 0;
@@ -4348,6 +4352,7 @@
 .history-list-title-wrap {
   display: -moz-flex;
   display: flex;
+  width: 100%;
   overflow: hidden;
   position: absolute;
   transition: left 0.5s ease-in-out
@@ -4433,17 +4438,20 @@
   width: 360px
 }
 
-.history-list-pin p {
-  font-size: 27px;
-  font-weight: 300;
-  text-align: center;
-  margin-left: 8rem;
-  line-height: 140%;
+.history-list-pin .color-gray {
+  font-size: 120px;
+  display: inline-block;
+  font-weight: 600 !important;
+  color: #d6d6d6
 }
-.history-list-pin p span {
-  font-family: 'kdg_Medium';
-  font-size: 30px;
+
+@media (max-width: 1023px) {
+  .history-list-pin .color-gray {
+      display:block;
+      font-size: 96px
+  }
 }
+
 .history-list-pin-num {
   font-size: 102px;
   display: inline-block;
@@ -4461,11 +4469,7 @@
   color: #2F8DF8;
   font-family: 'Pretendard';
   font-weight: 700;
-}
 
-.history-list-pin.hidden {
-  opacity: 0;
-  pointer-events: none; /* 숨겨진 상태에서 클릭 불가능하게 */
 }
 
 @media (max-width: 1023px) {
@@ -4508,7 +4512,6 @@
   vertical-align: top;
   font-weight: 400;
   font-size: 30px;
-  margin-left: 2rem;
 }
 
 .history-list-wrap .history-item-active,.history-list-wrap .history-item.is-active {
@@ -4517,12 +4520,9 @@
 }
 
 .history-list-wrap .history-item-active strong,.history-list-wrap .history-item.is-active strong {
-  width: 600px;
-  font-weight: 400;
-  font-size: 28px;
+  font-weight: 500;
+  font-size: 30px;
 }
-
-
 
 @media (max-width: 1023px) {
   .history-list-wrap .history-item {
@@ -4551,7 +4551,7 @@
 .history-list-wrap .history-item-year {
   display: inline-block;
   font-family: 'Pretendard';
-  width: 150px;
+  width: 100px;
   margin-left: -100px;
   vertical-align: top;
   font-weight: 500;
@@ -4697,7 +4697,22 @@
   .is-mobile-hide {
     display: none;
   }
-
+  .title-h3 {
+    font-weight: 400;
+    color: #00263C;
+    line-height: 1.5;
+    flex-grow: 1;
+    /* text-align: center; */
+    /* padding-right: 972px; */
+    font-family: 'Pretendard';
+    display: contents;
+    flex-direction: column;
+    /* margin-left: 110px; */
+}
+.title-h3 span {
+  display: flex;
+  /* margin-left: 108px; */
+}
 .history-list-wrap .history-item .container {
   padding-left: 566px;}
 
@@ -4708,7 +4723,6 @@
   font-size: 25px;
 }
 .history-list-wrap .history-item strong {
-  width: 500px;
   font-size: 25px;
 }
 .history-list-pin-num {
@@ -4720,11 +4734,69 @@
   margin-left: -16px;
 }
 }
-
-
 @media (max-width: 768px) {
   .history-list-wrap .history-item .container {
     padding-left: 37px;
+  
+}
+.sub_title .sub_title_text {
+  left: 4rem;
+}
+.sub_menu {
+  /* 드롭다운 기본 박스 */
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  font-family: sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  background: white;
+  overflow: hidden;
+}
+
+.sub_menu::before {
+  content: '메뉴 선택 ▾';
+  display: block;
+  background-color: #fff;
+  padding: 12px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.sub_menu li {
+  display: none;
+  flex-direction: column;
+}
+
+.sub_menu.show li {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub_menu a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.2s;
+}
+
+.sub_menu a:hover {
+  background-color: #2F8DF8;
+  color: #111;
+}
+
+.sub_menu a.active {
+  background-color: #2F8DF8;
+  font-weight: bold;
+}
+.sub_menu li a {
+  width: 100%;
+  color: #000;
+  font-size: 18px;
+  background-color: rgb(255 255 255 / 70%);
 }
 }
 @media (max-width: 375px) {
@@ -4737,5 +4809,13 @@
   }
   .history-list-wrap .history-item strong {
     font-size: 18px;
+}
+.sub_title .sub_title_text h1 {
+  font-size: 40px;
+  bottom: 4rem;
+  /* //마지막 */
+}
+.sub_title .sub_title_text p {
+  font-size: 20px;
 }
 }

@@ -116,12 +116,12 @@
 }
 .main_content h2 {
   position: absolute;
-  top: 20rem;
+  top: 18rem;
   text-align: center;
   color: #767676;
   font-weight: 300;
   font-size: 30px;
-  line-height: 100%;
+  line-height: 1.4;
 }
 .main_content h1 {
   position: absolute;
@@ -136,12 +136,12 @@
 }
 .main_content h3 {
   position: absolute;
-  bottom: 24rem;
+  bottom: 23rem;
   text-align: center;
   color: #767676;
   font-weight: 300;
   font-size: 25px;
-  line-height: 100%;
+  line-height: 1.4;
 }
 .main_content .app_button {
   position: absolute;

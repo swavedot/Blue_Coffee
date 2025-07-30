@@ -138,12 +138,12 @@
 .main_content .points {
   position: absolute;
   top: 35rem;
-  left: 78rem;
+  left: 85rem;
 }
 .main_content .yogurt {
   position: absolute;
   top: 41rem;
-  right: 24rem;
+  right: 15rem;
 }
 
 @media all and (max-width:1024px) {

@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/board.css">
   <link rel="stylesheet" href="./css/comm.css">
+  <link rel="stylesheet" href="./css/signature.css">
 
   <!-- JS -->
   <script src="../js/jquery.js"></script>
@@ -75,12 +76,12 @@
             <div class="dep1">
                 <span><a href="#">메뉴</a></span>
                 <ul class="dep2">
-                  <li><a href="/signature.html">시그니처</a></li>
-                  <li><a href="/coffee.html">커피</a></li>
-                  <li><a href="/latte.html">라떼</a></li>
-                  <li><a href="/ade-juice.html">에이드/주스</a></li>
-                  <li><a href="/tea-Icetea.html">티/아이스티</a></li>
-                  <li><a href="/yogurt.html">요거트스무디</a></li>
+                    <li><a href="/signature.html">시그니처</a></li>
+                    <li><a href="/coffee.html">커피</a></li>
+                    <li><a href="/latte.html">라떼</a></li>
+                    <li><a href="/ade-juice.html">에이드/주스</a></li>
+                    <li><a href="/tea-Icetea.html">티/아이스티</a></li>
+                    <li><a href="/yogurt.html">요거트스무디</a></li>
                 </ul>
             </div>
             <div class="dep1">
@@ -107,13 +108,9 @@
             </div>
       </nav>
       <div class="utill">
-        <a href="#" class="login">
+        <a href="#" class="login" id="loginBtn">
           <img src="./images/icon_top_login_white.svg" class="off" alt="로그인 화이트"/>
           <img src="./images/icon_top_login.svg" class="on" alt="로그인 파랑"/>
-        </a>
-        <a href="#" class="shop">
-          <img src="./images/icon_top_shop_white.svg" class="off" alt="장바구니 화이트"/>
-          <img src="./images/icon_top_shop.svg" class="on" alt="장바구니 파랑"/>
         </a>
         <a href="#" class="menu">
           <img src="./images/icon_top_menu_white.svg" class="off" alt="메뉴 화이트"/>
@@ -131,76 +128,76 @@
   </header>
     <!-- menu_wrap -->
     <!--  -->
-    <div id="header" class="">		
-			<div class="inner">
-				<div class="menu_wrap" style="">
-					<div class="menu_bx">
-						<div class="top">
-							
-							<a href="#" class="btn_menu close">
-								<span></span>
-								<span></span>
-								<span></span>
-							</a>
-						</div>
-						<ul id="gnb">
-							<li>
-								<a href="https://im-investment.com/kor/main/#" onclick="return false" class=""><span>브랜드 소개</span></a>
-								<div class="dep02 dep1" style="display: none;">
-                  <ul class="swiper-wrapper">
-                    <li class="swiper-slide snb01"><a href="#"><span>머무는 가치</span></a></li>
-                    <li class="swiper-slide snb02"><a href="#"><span>걸어온 길</span></a></li>
-                    <li class="swiper-slide snb07"><a href="#"><span>BI</span></a></li>
-                  </ul>
-                </div>
-							</li>
-							<li>
-								<a href="#" class=""><span>메뉴</span></a>
-                <div class="dep02 dep1" style="display: none;">
-                  <ul class="swiper-wrapper">
-                    <li class="swiper-slide snb01"><a href="#"><span>시그니처</span></a></li>
-                    <li class="swiper-slide snb02"><a href="#"><span>커피</span></a></li>
-                    <li class="swiper-slide snb07"><a href="#"><span>라떼</span></a></li>
-                    <li class="swiper-slide snb07"><a href="#"><span>에이드/주스</span></a></li>
-                    <li class="swiper-slide snb07"><a href="#"><span>티/아이스트</span></a></li>
-                    <li class="swiper-slide snb07"><a href="#"><span>요거트스무디</span></a></li>
-                  </ul>
-                </div>
-							</li>
-							<li>
-								<a href="#" class=""><span>멤버십</span></a>
-                <div class="dep02 dep1" style="display: none;">
-                  <ul class="swiper-wrapper">
-                    <li class="swiper-slide snb01"><a href="./member_1.html"><span>푸른餘멤버십</span></a></li>
-                    <li class="swiper-slide snb02"><a href="./member_2.html"><span>이용혜택</span></a></li>
-                    <li class="swiper-slide snb07"><a href="#"><span>자주묻는질문</span></a></li>
-                  </ul>
-                </div>
-							</li>
-							<li>
-								<a href="#" class=""><span>공지사항</span></a>
-                <div class="dep02 dep1" style="display: none;">
-                  <ul class="swiper-wrapper">
-                    <li class="swiper-slide snb01"><a href="#"><span>공지사항</span></a></li>
-                    <li class="swiper-slide snb02"><a href="#"><span>이벤트</span></a></li>
-                  </ul>
-                </div>
-							</li>
-							<li>
-								<a href="#" onclick="return false" class=""><span>매장안내</span></a>
-								<div class="dep02" style="display: none;">
-                  <ul class="swiper-wrapper">
-                    <li class="swiper-slide snb01"><a href="#"><span>위치안내</span></a></li>
-                    <li class="swiper-slide snb02"><a href="#"><span>공간소개</span></a></li>
-                  </ul>
-                </div>
-							</li>
-						</ul>
-					
+  <div id="header">		
+		<div class="inner">
+			<div class="menu_wrap" style="display: none;">
+				<div class="menu_bx">
+					<div class="top">
+						
+						<a href="#" class="btn_menu close">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
 					</div>
+					<ul id="gnb">
+						<li>
+							<a href="#"><span>브랜드 소개</span></a>
+							<div class="dep02 dep1" style="display: none;">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide snb01"><a href="./brand.html"><span>머무는 가치</span></a></li>
+                  <li class="swiper-slide snb02"><a href="./history.html"><span>걸어온 길</span></a></li>
+                  <li class="swiper-slide snb07"><a href="./location.html"><span>BI</span></a></li>
+                </ul>
+              </div>
+						</li>
+						<li>
+							<a href="#"><span>메뉴</span></a>
+              <div class="dep02 dep1" style="display: none;">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide snb01"><a href="./signature.html"><span>시그니처</span></a></li>
+                  <li class="swiper-slide snb02"><a href="./coffee.html"><span>커피</span></a></li>
+                  <li class="swiper-slide snb07"><a href="./latte.html"><span>라떼</span></a></li>
+                  <li class="swiper-slide snb07"><a href="./ade-juice.html"><span>에이드/주스</span></a></li>
+                  <li class="swiper-slide snb07"><a href="./tea-Icetea.html"><span>티/아이스트</span></a></li>
+                  <li class="swiper-slide snb07"><a href="./yogurt.html"><span>요거트스무디</span></a></li>
+                </ul>
+              </div>
+						</li>
+						<li>
+							<a href="#"><span>멤버십</span></a>
+              <div class="dep02 dep1" style="display: none;">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide snb01"><a href="./member_1.html"><span>푸른餘멤버십</span></a></li>
+                  <li class="swiper-slide snb02"><a href="./member_2.html"><span>이용혜택</span></a></li>
+                  <li class="swiper-slide snb07"><a href="./member_3.html"><span>자주묻는질문</span></a></li>
+                </ul>
+              </div>
+						</li>
+						<li>
+							<a href="#"><span>공지사항</span></a>
+              <div class="dep02 dep1" style="display: none;">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide snb01"><a href="./notice_1.html"><span>공지사항</span></a></li>
+                  <li class="swiper-slide snb02"><a href="./notice_2.html"><span>이벤트</span></a></li>
+                </ul>
+              </div>
+						</li>
+						<li>
+							<a href="#"><span>매장안내</span></a>
+							<div class="dep02" style="display: none;">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide snb01"><a href="./information_1.html"><span>위치안내</span></a></li>
+                  <li class="swiper-slide snb02"><a href="./information_2.html"><span>공간소개</span></a></li>
+                </ul>
+              </div>
+						</li>
+					</ul>
+				
 				</div>
 			</div>
 		</div>
+	</div>
     <!--  -->
     <div class="sub_content">
       <section class="sub_title">
