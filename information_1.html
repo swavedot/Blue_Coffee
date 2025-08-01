@@ -30,11 +30,13 @@
   <link rel="stylesheet" href="../css/board.css">
   <link rel="stylesheet" href="./css/comm.css">
   <link rel="stylesheet" href="./css/signature.css">
+  <link rel="stylesheet" href="./css/login.css">
 
   <!-- JS -->
   <script src="../js/jquery.js"></script>
   <script src="./js/ui.js"></script>
   <script src="./js/comm.js"></script>
+  <script type="text/javascript" src="./js/signature.js"></script>
 
   <!-- 플러그인 -->
   <link rel="stylesheet" href="../js/plugin/swiper/swiper.css">
@@ -220,106 +222,107 @@
             <h2>Location</h2>
             <h1>오시는 길</h1>
           </div>
+          <!-- map -->
+          <div class="map-responsive">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.1684425897224!2d129.056914575992!3d35.15241965884147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568eb708afe51fb%3A0x977150933828e443!2z64-Z7ISx7J247J6s6rCc67Cc6rWQ7Jyh7JuQ!5e0!3m2!1sko!2skr!4v1754026490595!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-   
-          
-          <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1630
-            .9362284550173!2d128.97822883877637!3d35.15980148602919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13
-            .1!3m3!1m2!1s0x3568c1dcfddfba5f%3A0x7e2f06802463097d!2z7JeQ7J207LmY67mE7JeQ7IqkKOyjvCk!5e0!3m2!1sko
-            !2skr!4v1749449837355!5m2!1sko!2skr" width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-            <div class="store-search-widget">
-              <!-- 검색 입력 영역 -->
-              <div class="search-input-container">
-                  <input type="text" placeholder="매장명 또는 주소" class="search-input">
-              </div>
-      
-              <!-- 검색 결과 수 -->
-              <div class="search-results-count">
-                  (검색 결과)
-              </div>
-      
-              <!-- 매장 목록 -->
-              <div class="store-list">
-                  <!-- 매장 아이템 예시 1 -->
-                  <div class="store-item">
+              <div class="store-search-widget">
+                <!-- 검색 입력 영역 -->
+                <div class="search-input-container">
+                    <input type="text" placeholder="매장명 또는 주소" class="search-input">
+                </div>
+        
+                <!-- 검색 결과 수 -->
+                <div class="search-results-count">
+                  <p>(검색 결과)</p>
+                  <button id="toggleButton">
+                    <span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
+                  </button>
+                </div>
+        
+                <!-- 매장 목록 -->
+                <div class="store-list">
+                    <!-- 매장 아이템 예시 1 -->
+                    <div class="store-item">
+                        <div class="store-info">
+                            <div class="store-name">동의대역</div>
+                            <div class="store-address">부산광역시 부산진구 가야대로 589 (가야제1동)</div>
+                            <div class="store-phone">1522-3232</div>
+                        </div>
+                        <i class="fas fa-map-marker-alt map-pin-icon"></i> <!-- 지도 핀 아이콘 -->
+                    </div>
+        
+                    <!-- 매장 아이템 예시 2 -->
+                    <div class="store-item">
+                        <div class="store-info">
+                            <div class="store-name">서면트레이더스</div>
+                            <div class="store-address">부산광역시 부산진구 시민공원로 31 (부암동)</div>
+                            <div class="store-phone">1522-3232</div>
+                        </div>
+                        <i class="fas fa-map-marker-alt map-pin-icon"></i>
+                    </div>
+        
+                    <!-- 매장 아이템 예시 3 -->
+                    <div class="store-item">
+                        <div class="store-info">
+                            <div class="store-name">부산개금역</div>
+                            <div class="store-address">부산광역시 부산진구 가야대로 462 (개금동)</div>
+                            <div class="store-phone">1522-3232</div>
+                        </div>
+                        <i class="fas fa-map-marker-alt map-pin-icon"></i>
+                    </div>
+                    <div class="store-item">
+                        <div class="store-info">
+                            <div class="store-name">서면문화로</div>
+                            <div class="store-address">부산광역시 부산진구 서면문화로 10 (부전동)</div>
+                            <div class="store-phone">1522-3232</div>
+                        </div>
+                        <i class="fas fa-map-marker-alt map-pin-icon"></i>
+                    </div>
+                    <div class="store-item">
                       <div class="store-info">
-                          <div class="store-name">동의대역</div>
-                          <div class="store-address">부산광역시 부산진구 가야대로 589 (가야제1동)</div>
-                          <div class="store-phone">1522-3232</div>
-                      </div>
-                      <i class="fas fa-map-marker-alt map-pin-icon"></i> <!-- 지도 핀 아이콘 -->
-                  </div>
-      
-                  <!-- 매장 아이템 예시 2 -->
-                  <div class="store-item">
-                      <div class="store-info">
-                          <div class="store-name">서면트레이더스</div>
-                          <div class="store-address">부산광역시 부산진구 시민공원로 31 (부암동)</div>
-                          <div class="store-phone">1522-3232</div>
+                          <div class="store-name">남포동</div>
+                          <div class="store-address">부산광역시 중구 구덕로 34 (남포동)</div>
+                          <div class="store-phone">1522-4444</div>
                       </div>
                       <i class="fas fa-map-marker-alt map-pin-icon"></i>
                   </div>
-      
-                  <!-- 매장 아이템 예시 3 -->
                   <div class="store-item">
                       <div class="store-info">
-                          <div class="store-name">부산개금역</div>
-                          <div class="store-address">부산광역시 부산진구 가야대로 462 (개금동)</div>
-                          <div class="store-phone">1522-3232</div>
+                          <div class="store-name">광복점</div>
+                          <div class="store-address">부산광역시 중구 광복로 60 (광복동)</div>
+                          <div class="store-phone">1522-5555</div>
                       </div>
                       <i class="fas fa-map-marker-alt map-pin-icon"></i>
                   </div>
                   <div class="store-item">
                       <div class="store-info">
-                          <div class="store-name">서면문화로</div>
-                          <div class="store-address">부산광역시 부산진구 서면문화로 10 (부전동)</div>
-                          <div class="store-phone">1522-3232</div>
+                          <div class="store-name">부산대점</div>
+                          <div class="store-address">부산광역시 금정구 부산대학로 63번길 2 (장전동)</div>
+                          <div class="store-phone">1522-6666</div>
                       </div>
                       <i class="fas fa-map-marker-alt map-pin-icon"></i>
                   </div>
                   <div class="store-item">
-                    <div class="store-info">
-                        <div class="store-name">남포동</div>
-                        <div class="store-address">부산광역시 중구 구덕로 34 (남포동)</div>
-                        <div class="store-phone">1522-4444</div>
-                    </div>
-                    <i class="fas fa-map-marker-alt map-pin-icon"></i>
+                      <div class="store-info">
+                          <div class="store-name">경성대점</div>
+                          <div class="store-address">부산광역시 남구 용소로 13 (대연동)</div>
+                          <div class="store-phone">1522-7777</div>
+                      </div>
+                      <i class="fas fa-map-marker-alt map-pin-icon"></i>
+                  </div>
+        
+                    <!-- 더 많은 매장 아이템을 여기에 추가할 수 있습니다. -->
                 </div>
-                <div class="store-item">
-                    <div class="store-info">
-                        <div class="store-name">광복점</div>
-                        <div class="store-address">부산광역시 중구 광복로 60 (광복동)</div>
-                        <div class="store-phone">1522-5555</div>
-                    </div>
-                    <i class="fas fa-map-marker-alt map-pin-icon"></i>
-                </div>
-                <div class="store-item">
-                    <div class="store-info">
-                        <div class="store-name">부산대점</div>
-                        <div class="store-address">부산광역시 금정구 부산대학로 63번길 2 (장전동)</div>
-                        <div class="store-phone">1522-6666</div>
-                    </div>
-                    <i class="fas fa-map-marker-alt map-pin-icon"></i>
-                </div>
-                <div class="store-item">
-                    <div class="store-info">
-                        <div class="store-name">경성대점</div>
-                        <div class="store-address">부산광역시 남구 용소로 13 (대연동)</div>
-                        <div class="store-phone">1522-7777</div>
-                    </div>
-                    <i class="fas fa-map-marker-alt map-pin-icon"></i>
-                </div>
-      
-                  <!-- 더 많은 매장 아이템을 여기에 추가할 수 있습니다. -->
               </div>
-            </div>
-            <div class="map-pin">
-              <img src="./images/map-pin.svg" alt="map-pin">
-            </div>
+              <div class="map-pin">
+                <img src="./images/map-pin.svg" alt="map-pin">
+              </div>
+          </div>
+            
+            
 
-          </div>  
+            
       </section>
 
   
@@ -358,6 +361,106 @@
         </div>
       </footer>
     </div>
+
+    <div class="login-overlay" id="loginOverlay">
+      <div class="login-modal">
+        <button class="close-login" aria-label="닫기">X</button>
+    
+        <!-- ✅ 기존 로그인 폼 삽입 -->
+        <div class="find_mem_inner">
+          <form id="frmLogin" action="https://www.starbucks.co.kr/login/login_proc.do" method="post">
+            <fieldset>
+              <section class="renew_joinform_v2">
+                <div class="top_form">
+                  <p class="find_form_txt">
+                    <span class="t_006633">로그인</span>
+                    <span class="sub">푸른여에 오신 것을 환영합니다</span>
+                  </p>
+                </div>
+                <div class="renew_input_box bd_none">
+                  <input class="login_id mb10" id="txt_user_id" name="user_id" type="text" maxlength="20" placeholder="아이디" required />
+                  <input class="login_pw mb10" id="txt_user_pwd" name="user_pwd" type="password" maxlength="20" placeholder="비밀번호" required autocomplete="off" />
+                  <span class="checkWrap">
+                    <img id="checkmarkButton" src="./images/gray_checkmark.svg" alt="체크 버튼" class="checkmark-icon">
+                    <label for="idRemb" class="id_save">자동 로그인</label>
+                  </span>
+                  <p class="btn_mem_login">
+                    <a class="btn_login" href="javascript:void(0);" role="submit">로그인</a>
+                  </p>
+                </div>
+                <div class="login_btn_wrap">
+                  <ul>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">아이디 찾기</a></li>
+                    <li class="last"><a href="#">비밀번호 찾기</a></li>
+                  </ul>
+                </div>
+              </section>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- login JS -->
+    <script>
+      const loginBtn = document.querySelector(".login");
+      const overlay = document.getElementById("loginOverlay");
+      const closeBtn = document.querySelector(".close-login");
+    
+      loginBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        overlay.style.display = "flex";
+      });
+    
+      closeBtn.addEventListener("click", function () {
+        overlay.style.display = "none";
+      });
+    
+      overlay.addEventListener("click", function (e) {
+        if (e.target === overlay) {
+          overlay.style.display = "none";
+        }
+      });
+
+      $(function() {
+
+        const defaultImagePath = './images/gray_checkmark.svg'; // 기본 회색 체크마크 이미지
+        const activeImagePath = './images/blue_checkmark.svg';   // 클릭 시 변경될 파란색 체크마크 이미지 (예시)
+
+        // #checkmarkButton 요소를 클릭했을 때 실행될 함수
+        $('#checkmarkButton').on('click', function() {
+           const $this = $(this); // 클릭된 이미지 요소 (jQuery 객체)
+
+           // 현재 이미지의 src 속성 값을 확인
+           if ($this.attr('src') === defaultImagePath) {
+            // 현재 이미지가 기본 이미지(회색)라면, 활성 이미지(파란색)로 변경
+            $this.attr('src', activeImagePath);
+           } else {
+            // 현재 이미지가 활성 이미지(파란색)라면, 기본 이미지(회색)로 되돌림
+            $this.attr('src', defaultImagePath);
+           }
+         });
+       });
+    </script>
     <script src="./js/member.js"></script>
+    <!-- map list 클릭버튼 -->
+    <script>
+      const button = document.getElementById("toggleButton");
+      const target = document.querySelector(".store-list");
+      const icon = button.querySelector("i");
+    
+      button.addEventListener("click", function () {
+        if (target.style.display === "none") {
+          target.style.display = "block";
+        } else {
+          target.style.display = "none";
+        }
+
+        // 아이콘 회전 토글 (클래스 추가/제거)
+        icon.classList.toggle("fa-angle-down");
+        icon.classList.toggle("fa-angle-up");
+      });
+    </script>
   </body>
 </html>

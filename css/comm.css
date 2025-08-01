@@ -44,7 +44,7 @@ input[type="checkbox"]{ border:1px solid #ddd;}
 
 #header .menu_wrap .menu_bx #gnb .dep02{ display:none; margin-top:40px; }
 #header .menu_wrap .menu_bx #gnb .dep02 .swiper-wrapper{ display:block; margin-bottom:-20px; font-size:0; 	}
-#header .menu_wrap .menu_bx #gnb .dep02 .swiper-wrapper li{ display:inline-block; vertical-align:top;}
+#header .menu_wrap .menu_bx #gnb .dep02 .swiper-wrapper li{ display:flex; vertical-align:top;}
 #header .menu_wrap .menu_bx #gnb .dep02 .swiper-wrapper li a:nth-child(11){ margin-right: 10px; }
 #header .menu_wrap .menu_bx #gnb .dep02 .swiper-wrapper li a{ display:block; font-size: 20px; line-height:30px; color:#aaa; margin-bottom: 15px;}
 #header .menu_wrap .menu_bx #gnb .dep02 .swiper-wrapper li a span{ display:inline-block; position:relative; font-size: 20px;}
@@ -64,7 +64,18 @@ input[type="checkbox"]{ border:1px solid #ddd;}
 #header.scroll .inner .right .lang li a.on{ color:#444; }
 #header.scroll .inner .right .btn_menu span{ background:#222; }
 
-
+@media all and (max-width:425px) {
+  #header .menu_wrap .menu_bx #gnb .dep02 .swiper-wrapper {
+	display: flex;
+	flex-direction: column;
+  }
+  #header .menu_wrap .menu_bx #gnb .dep02 .swiper-wrapper li {
+	margin-bottom: 1px;
+  }	
+  #header .menu_wrap .menu_bx #gnb .dep02 .swiper-wrapper li a span {
+	font-size: 15px;
+  }
+}
 
 @keyframes r1 {
 0% { transform: rotate( 0 ); -webkit-transform: rotate( 0 ); -moz-transform: rotate( 0 ); }
@@ -161,8 +172,9 @@ input[type="checkbox"]{ border:1px solid #ddd;}
 
 	#header .menu_wrap .menu_bx #gnb .dep02{ margin-top:20px; }
 	#header .menu_wrap .menu_bx #gnb .dep02 .swiper-wrapper{ margin-bottom:-20px; }
-	#header .menu_wrap .menu_bx #gnb .dep02 .swiper-wrapper li{ width:50% !important; margin-bottom:20px; }
+	#header .menu_wrap .menu_bx #gnb .dep02 .swiper-wrapper li{ width:100% }
 	#header .menu_wrap .menu_bx #gnb .dep02 .swiper-wrapper li a{ font-size:13px; line-height:20px; }
+	#header .menu_wrap .menu_bx #gnb .dep02 .swiper-wrapper li a span { font-size: 15px;}
 	#header .menu_wrap .menu_bx #gnb .dep02 .swiper-wrapper li a span:after{ bottom:-3px; }
 
 	#header .menu_wrap .menu_bx .adr_bx{ margin-top:45px; padding-top:10px; }

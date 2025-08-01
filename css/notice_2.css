@@ -124,5 +124,37 @@
   color: #111;
 }
 
+@media (max-width: 1024px) {
+  .event-card img {
+    width: 400px;
+  }
 
-
+}
+@media (max-width: 768px) {
+  .container {
+    height: 1200px;
+  }
+  .event-card img {
+    width: 330px;
+  }
+  .event-cards-grid {
+    gap: 20px;
+    padding-left: 4px;
+  }
+  .event-info {
+    margin-bottom: 3rem;
+  }
+  .event-info p{
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+@media (max-width: 425px) {
+  .event-cards-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    height: 2100px;
+  }
+}

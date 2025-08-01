@@ -50,7 +50,6 @@
   bottom: 7rem;
 }
 .sub_title .sub_title_text h1 {
-  position: absolute;
   font-size: 50px;
   font-weight: 400;
   color: #fff;
@@ -119,6 +118,7 @@
   top: 20rem;
   font-size: 50px;
   font-weight: 500;
+  font-family: 'Pretendard-Regular';
   letter-spacing: -1.0px;
 }
 .main_content p {
@@ -169,6 +169,31 @@
   
 }
 
+@media all and (max-width:768px) {
+  .main_content .vmain_logo {
+    width: 600px;
+    height: 38px;
+    left: 10rem;
+    font-size: 25px;
+  }
+  .main_content h1 {
+    left: 9rem;
+  }
+  .main_content p {
+    width: 277px;
+    left: 9rem;
+  }
+  .main_content .points {
+    left: 42rem;
+  }
+  .main_content .yogurt {
+    top: 40rem;
+    right: 4rem;
+  }
+
+
+}
+
 
 /* member1_sub */
 .member1_sub {
@@ -199,7 +224,7 @@
   height: 150px;
   margin: 0 auto;
   border-radius: 16px;
-  padding: 23px 33px;
+  padding: 15px 33px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   text-align: center;
   cursor: pointer;
@@ -215,7 +240,13 @@
     width: 220px;
     height: 140px;
   }
-
+}
+@media all and (max-width:768px) {
+  .member1_sub .sub_content ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px 20px;
+  }
+  
 }
 
 .sub_content ul li h3 {
@@ -246,21 +277,21 @@
 }
 /* card1 */
 .sub_content .card1 {
-  border: 4px solid #ADADAD;
+  border: 4px solid #A5D6F9;
 }
 .sub_content .card1 p {
   margin-left: 2rem;
 }
 .sub_content .card1 h3 {
 
-  color: #ADADAD;
+  color: #A5D6F9;
 }
 /* card2 */
 .sub_content .card2 {
-  border: 4px solid #778388;
+  border: 4px solid #548ECF;
 }
 .sub_content .card2 h3 {
-  color: #778388;
+  color: #548ECF;
 }
 .sub_content .card2 p {
 
@@ -268,10 +299,10 @@
 }
 /* card3 */
 .sub_content .card3 {
-  border: 4px solid #C4885E;
+  border: 4px solid #B1764F;
 }
 .sub_content .card3 h3 {
-  color: #C4885E;
+  color: #B1764F;
 }
 .sub_content .card3 p {
 
@@ -279,19 +310,41 @@
 }
 /* card4 */
 .sub_content .card4 {
-  border: 4px solid #041C3B;
+  border: 4px solid #002D59;
 }
 .sub_content .card4 p {
   position: absolute;
   right: 2rem;
 }
 .sub_content .card4 h3 {
-  color: #041C3B;
+  color: #002D59;
 }
 .sub_content .card4 img {
   position: absolute;
   left: 3rem;
 }
+
+/* notice */
+.sub_content .notice {
+  position: absolute;
+  left: 17rem;
+  bottom: 6rem;
+}
+.sub_content .notice h1 {
+  font-size: 30px;
+  margin-bottom: -2rem;
+}
+.sub_content .notice p {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 160%;
+  white-space: pre-line;
+}
+.sub_content .notice span {
+  font-size: 18px;
+  font-weight: 400;
+}
+
 
 @media all and (max-width:1024px) {
   .sub_content ul li h3 {
@@ -322,25 +375,128 @@
   }  
 }
 
-/* notice */
-.sub_content .notice {
-  position: absolute;
-  left: 17rem;
-  bottom: 6rem;
+
+@media all and (max-width:768px) {
+  .member1_sub .sub_content {
+    height: 950px;
+  }
+  .sub_content .card1 p {
+    margin-left: 1rem;
+  }
+  .sub_content .card2 p {
+    right: 25px;
+  }
+
+  .sub_content ul li img {
+    top: 15rem;
+  }
+  .sub_content ul li h3 {
+    margin-left: 17%;
+  }
+ 
+  .sub_content ul li h5 {
+    margin-top: 13rem;
+    font-size: 14px;
+  }
+  .sub_content .card4 img {
+    left: 1rem;
+  }
+
+  .sub_content .notice {
+    left: 9rem;
+    bottom: 7rem;
+  }
+  .sub_content .notice h1 {
+    font-size: 20px;
+  }
+  .sub_content .notice p {
+    font-size: 13px;
+  }
 }
-.sub_content .notice h1 {
-  font-size: 30px;
-  margin-bottom: -2rem;
+
+@media (max-width: 425px) {
+  .main_content .vmain_logo {
+    width: 316px;
+    height: 31px;
+    left: 6rem;
+    font-size: 20px;
+  }
+  .main_content h1 {
+    font-size: 30px;
+    left: 5rem;
+  }
+  .main_content p {
+    left: 5rem;
+  }
+  .main_content .points {
+    top: 52rem;
+    left: 8rem;
+  }
+  .main_content .yogurt {
+    display: none;
+  }
+  .member1_sub .sub_content {
+    height: 1200px;
+  }
+  .member1_sub .sub_content ul {
+    gap: 100px 10px;
+  }
+  .member1_sub .sub_content ul li {
+    width: 170px;
+    height: 170px;
+  }
+  .sub_content ul li h3 {
+    font-size: 25px;
+    margin-left: 12%;
+    margin-top: 10%;
+  }
+  .sub_content .card1 p  {
+    margin-left: -1rem;
+    margin-bottom: 2rem;
+  }
+  .sub_content .card2 p {
+    right: 12px;
+  }
+  .sub_content .card4 p,
+  .sub_content .card3 p {
+    right: 1rem;
+  }
+
+
+  .sub_content ul li h5 {
+    margin-top: 17rem;
+    margin-left: -1rem;
+  }
+  .sub_content ul li img {
+    display: none;
+  }
+  .sub_content .notice {
+    width: 81%;
+    left: 4rem;
+    bottom: 7rem;
+  }
+  .sub_content .notice h1 {
+    font-size: 18px;
+    margin-bottom: 0px;
+  }
+  .sub_content .notice span {
+    font-size: 15px;
+  }
 }
-.sub_content .notice p {
-  font-size: 16px;
-  font-weight: 200;
-  line-height: 160%;
-  white-space: pre-line;
-}
-.sub_content .notice span {
-  font-size: 18px;
-  font-weight: 400;
+
+@media (max-width: 375px) {
+  .main_content .vmain_logo {
+    width: 292px;
+    left: 5rem;
+  }
+  .main_content h1{
+    left: 3rem;
+  }
+  .main_content .points {
+    left: 5rem;
+  }
+
+  
 }
 
 

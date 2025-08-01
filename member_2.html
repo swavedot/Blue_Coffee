@@ -30,11 +30,13 @@
  <link rel="stylesheet" href="../css/board.css">
  <link rel="stylesheet" href="./css/comm.css">
  <link rel="stylesheet" href="./css/signature.css">
+ <link rel="stylesheet" href="./css/login.css">
 
  <!-- JS -->
  <script src="../js/jquery.js"></script>
  <script src="./js/ui.js"></script>
  <script src="./js/comm.js"></script>
+ <script type="text/javascript" src="./js/signature.js"></script>
 
  <!-- 플러그인 -->
  <link rel="stylesheet" href="../js/plugin/swiper/swiper.css">
@@ -316,6 +318,89 @@
           </ul>
         </div>
       </footer>
+
+      <div class="login-overlay" id="loginOverlay">
+        <div class="login-modal">
+          <button class="close-login" aria-label="닫기">X</button>
+      
+          <!-- ✅ 기존 로그인 폼 삽입 -->
+          <div class="find_mem_inner">
+            <form id="frmLogin" action="https://www.starbucks.co.kr/login/login_proc.do" method="post">
+              <fieldset>
+                <section class="renew_joinform_v2">
+                  <div class="top_form">
+                    <p class="find_form_txt">
+                      <span class="t_006633">로그인</span>
+                      <span class="sub">푸른여에 오신 것을 환영합니다</span>
+                    </p>
+                  </div>
+                  <div class="renew_input_box bd_none">
+                    <input class="login_id mb10" id="txt_user_id" name="user_id" type="text" maxlength="20" placeholder="아이디" required />
+                    <input class="login_pw mb10" id="txt_user_pwd" name="user_pwd" type="password" maxlength="20" placeholder="비밀번호" required autocomplete="off" />
+                    <span class="checkWrap">
+                      <img id="checkmarkButton" src="./images/gray_checkmark.svg" alt="체크 버튼" class="checkmark-icon">
+                      <label for="idRemb" class="id_save">자동 로그인</label>
+                    </span>
+                    <p class="btn_mem_login">
+                      <a class="btn_login" href="javascript:void(0);" role="submit">로그인</a>
+                    </p>
+                  </div>
+                  <div class="login_btn_wrap">
+                    <ul>
+                      <li><a href="#">회원가입</a></li>
+                      <li><a href="#">아이디 찾기</a></li>
+                      <li class="last"><a href="#">비밀번호 찾기</a></li>
+                    </ul>
+                  </div>
+                </section>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <!-- login JS -->
+      <script>
+        const loginBtn = document.querySelector(".login");
+        const overlay = document.getElementById("loginOverlay");
+        const closeBtn = document.querySelector(".close-login");
+      
+        loginBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          overlay.style.display = "flex";
+        });
+      
+        closeBtn.addEventListener("click", function () {
+          overlay.style.display = "none";
+        });
+      
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) {
+            overlay.style.display = "none";
+          }
+        });
+  
+        $(function() {
+  
+          const defaultImagePath = './images/gray_checkmark.svg'; // 기본 회색 체크마크 이미지
+          const activeImagePath = './images/blue_checkmark.svg';   // 클릭 시 변경될 파란색 체크마크 이미지 (예시)
+  
+          // #checkmarkButton 요소를 클릭했을 때 실행될 함수
+          $('#checkmarkButton').on('click', function() {
+             const $this = $(this); // 클릭된 이미지 요소 (jQuery 객체)
+  
+             // 현재 이미지의 src 속성 값을 확인
+             if ($this.attr('src') === defaultImagePath) {
+              // 현재 이미지가 기본 이미지(회색)라면, 활성 이미지(파란색)로 변경
+              $this.attr('src', activeImagePath);
+             } else {
+              // 현재 이미지가 활성 이미지(파란색)라면, 기본 이미지(회색)로 되돌림
+              $this.attr('src', defaultImagePath);
+             }
+           });
+         });
+      </script>
+
     </div>
   </body>
 </html>

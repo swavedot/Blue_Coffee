@@ -852,6 +852,7 @@ a.btn-lg, button.btn-lg {
 .aside-content-wrap.cont-prod-wrap.cont-prod-detail .cont-body {
   min-height: 555px;
   width: 50%;
+  margin-right: 70px;
 }
 .aside-content-wrap .aside-wrap ~ .cont-body {
   padding-right: 0;
@@ -890,11 +891,13 @@ a.btn-lg, button.btn-lg {
   .sub_title {
     width: 100%;
     background: url(../images/svisual_04.png) no-repeat center / cover;
+    background-position-x: -41rem;
   }
   .sub_menu li a {
       width: 161px;
   }
   .sub_title .sub_title_text {
+    bottom: 9rem;
     left: 3rem;
   }
   .sub_title .sub_title_text h1 {
@@ -907,11 +910,18 @@ a.btn-lg, button.btn-lg {
 
 }
 @media (max-width: 768px) {
+  .sub_title {
+    background-position-x: -55rem;
+  }
+  .sub_title .sub_title_text {
+    bottom: 4rem;
+  }
   .prod-detail-header {
     width: 722px;
   }
   .aside-content-wrap.cont-prod-wrap.cont-prod-detail .cont-body {
     width: 733px;
+    margin-left: 20px;
   }
   .aside-content-wrap.cont-prod-wrap.cont-prod-detail.is-fix-bottom {
       display: flex;
@@ -954,8 +964,8 @@ a.btn-lg, button.btn-lg {
 }
 .sub_title .sub_menu {
   position: absolute;
-  bottom: -55px;
-  width: 100%;
+  bottom: -88px;
+  width: 85%;
   z-index: 10;
 }
 

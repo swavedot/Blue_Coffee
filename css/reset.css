@@ -29,7 +29,18 @@
 /* basic_start */
 *					{box-sizing: border-box; -webkit-box-sizing: border-box; padding:0px; margin:0px; }
 html                { font-size: 10px; }
-body             { font-family:"Play", 'S-CoreDream-3Light', "Malgun Gothic", "맑은 고딕" ,helvetica, 'Dotum', "Apple SD Gothic Neo", sans-serif; font-size:14px; letter-spacing:0px; color:#111; min-width:360px; overflow-x: hidden; word-wrap: break-word; word-break: keep-all; line-height: 1.4;}
+body             { 
+  margin: 0; 
+  padding: 0; 
+  font-family:"Play", 'S-CoreDream-3Light', "Malgun Gothic", "맑은 고딕" ,helvetica, 'Dotum', "Apple SD Gothic Neo", sans-serif; 
+  font-size:14px; 
+  letter-spacing:0px; 
+  color:#111; 
+  overflow-x: hidden; 
+  word-wrap: break-word; 
+  word-break: keep-all; 
+  line-height: 1.4;
+}
 body.noscroll		{ position: fixed; top:0px;left:0px;right:0px;bottom:0px; }
 
 

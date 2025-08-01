@@ -30,6 +30,12 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: 'MYHaemalgeunSangsang';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYHaemalgeunSangsang.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* 공통부문 */
 .brand_button {
@@ -63,7 +69,6 @@
     font-size: 12px;
   }
 }
-
 
 /* 기본 스타일 */
 .header{
@@ -292,7 +297,7 @@
     cursor: pointer;
   }
   .header .headerInner .gnb .dep1 {
-    font-size: 18px;
+    font-size: 15px;
   }
   .header .headerInner .utill {
     display: flex;
@@ -306,8 +311,9 @@
 
 @media all and (max-width:768px) {
   .header .headerInner {
-    width: 95%;
-    margin: 0px -2px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 3rem;
   }
   .header .headerInner .utill {
     gap: 20px;
@@ -320,21 +326,23 @@
 }
 
 @media all and (max-width:425px) {
+  .header .headerInner {
+    width: 100%;
+  }
   .header .headerInner .utill {
     gap: 10px;
-    margin-left: 18rem;
+    margin-left: 17rem;
   }
-  
+   
 }
 
 @media all and (max-width:375px) {
   .header .headerInner {
-    width: 90%;
-    margin: 0px -2px;
+    width: 100%;
   }
   .header .headerInner .utill {
     gap: 5px;
-    margin-left: 15rem;
+    margin-left: 12rem;
   }
 }
 
@@ -453,21 +461,19 @@
   right: 50px;
 }
 .msection_content .menu_title p {
-  font-size: 24px;
-  font-weight: 200;
+  font-size: 27px;
   text-align: right;
-  line-height: 30px;
+  line-height: 1.4;
   letter-spacing: -0.9px;
-  color: #fff;
+  color: #cfcfcf;
 }
-.msection_content .menu_title p span {
-  font-size: 24px;
-  font-weight: 400;
+.msection_content .menu_title span {
+  font-size: 27px;
   color: #fff;
 }
 .msection_content .menu_button {
   position: absolute;
-  top: 61%;
+  top: 65%;
   right: 50px;
 }
 .msection_content .menu_button .brand_button:hover {
@@ -515,7 +521,7 @@
   .msection_content .menu_title p {
     font-size: 16px;
   }
-  .msection_content .menu_title p span {
+  .msection_content .menu_title span {
     font-size: 16px;
   }
   .msection_content .menu_top img {
@@ -543,6 +549,10 @@
   .msection_content .menu_title p {
     text-align: start;
   }
+  .msection_content .menu_title span {
+    font-size: 16px;
+  }
+
   .msection_content .menu_img .menu_img_01 {
     width: 200px;
   } 
@@ -570,7 +580,12 @@
   }
   .msection_content .menu_title p {
     text-align: start;
+    font-size: 14px;
   }
+  .msection_content .menu_title p span {
+    font-size: 14px;
+  }
+
   .msection_content .menu_button {
     top: 59%;
     left: 4rem;
@@ -818,8 +833,8 @@
     display: none;
   }
   .signature_top .brand_button {
-    top: 13rem;
-    left: 52%;
+    top: 15rem;
+    left: 54%;
   }
   .signature_top .signature_top_title {
     top: 10rem;
@@ -1264,20 +1279,20 @@
 @media all and (max-width:375px) {
   .space_intro .space_intro_title {
     top: 0;
-    left: 6%;
+    left: 10%;
   }
   .space_intro .space_intro_title h1 {
     width: 110px;
     margin-bottom: 18rem;
-    margin-left: 1rem;
     font-size: 30px;
+  }
+  .space_intro .space_intro_desc {
+    margin-right: -7rem;
+    top: 25px;
   }
   .space_intro .space_intro_desc p {
     margin-left: 3rem;
-  }
-  .space_intro .space_intro_desc {
-    margin-right: -3rem;
-    top: 25px;
+    margin-top: 1rem;
   }
   .space_intro .space_intro_desc h1 {
     font-size: 20px;
@@ -1289,8 +1304,8 @@
     right: calc(138% - 21px);
   }
   .space_intro .space_btn {
-    top: 31%;
-    left: 3rem;
+    top: 33%;
+    left: 4rem;
   }
   .space_intro .space_content .space_01{ width: 88px; height: 96px; top: 41px; left: 145px;}
   .space_intro .space_content .space_02{ width: 143px; top: 25px; left: 239px;}

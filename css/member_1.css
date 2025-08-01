@@ -127,6 +127,7 @@
   position: absolute;
   color: #2F8DF8;
   top: 27rem;
+  font-family: 'Pretendard-Regular';
   font-size: 50px;
   font-weight: 500;
   letter-spacing: -1.0px;
@@ -223,6 +224,8 @@
 @media all and (max-width:1024px) {
   .main_content .vmain_logo {
     width: 800px;
+    height: 38px;
+    font-size: 25px;
   }
   .main_content h2 {
     font-size: 25px;
@@ -237,6 +240,31 @@
   
 }
 
+@media all and (max-width:768px) {
+  .main_content .vmain_logo {
+    width: 600px;
+    left: 10rem;
+  }
+}
+@media all and (max-width:425px) {
+  .main_content .vmain_logo {
+    width: 330px;
+    height: 30px;
+    left: 5rem;
+    font-size: 20px;
+  }
+  .main_content h1 {
+    font-size: 36px;
+  }
+  .main_content h2 {
+    font-size: 20px;
+  }
+  .main_content h3 {
+    display: none;
+  }
+  
+
+}
 /* member1_sub */
 .member1_sub {
   width: 100%;
@@ -289,6 +317,40 @@
   width: 50px;
   height: 80px;
   margin: 0 auto;
+}
+
+@media all and (max-width:768px) {
+  .member1_sub .sub_content ul li {
+    width: 230px;
+    height: 230px;
+  }
+}
+@media all and (max-width:425px) {
+  .main_content .app_button {
+    bottom: 15rem; 
+    left: 1rem;
+  }
+  .main_content .app_button .button_m {
+    width: 85%;
+  }
+  .main_content .app_button .button_s {
+    width: 85%;
+    gap: 5px;
+  }
+}
+@media all and (max-width:375px) {
+  .main_content .vmain_logo {
+    width: 294px;
+    height: 30px;
+    font-size: 20px;
+  }
+  .main_content .app_button .button_m {
+    width: 75%;
+    font-size: 18px;
+  }
+  .main_content .app_button .button_s {
+    width: 75%;
+  }
 }
 /* card1 */
 .card1 .img-wrap {
@@ -481,4 +543,84 @@
 .sub_content ul li p {
   margin-top: 1rem;
 }
+@media all and (max-width:425px) {
+  .member1_sub .sub_content ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .member1_sub .sub_content ul li {
+    width: 190px;
+    height: 190px;
+    padding: 28px 20px;
+  }
+  .sub_content ul li h3 {
+    width: 164px;
+    font-size: 10px;
+    margin-top: -1px;
+    padding-right: 20px;
+  }
+  .sub_content ul li p {
+    margin-top: -1rem;
+    font-size: 12px;
+  }
+  .sub_content ul .card4 p {
+    margin-top: -1rem;
+  }
+  .sub_content ul .card5 p,
+  .sub_content ul .card6 p {
+    margin-top: 0rem;
+  }
+  .card1 .img-wrap img {
+    top: -8px;
+    left: 6px;
+    width: 40px;
+  }
+  .card2 .img-wrap img {
+    top: -8px;
+    left: 5px;
+    width: 40px;
+  }
+  .card3 .img-wrap img {
+    top: -8px;
+    width: 50px;
+  }
+  .card4 .img-wrap img {
+    width: 40px;
+    top: -8px;
+    left: 5px;
+  }
+  .card5 .img-wrap img {
+    top: -2px;
+    left: 0px;
+    width: 50px;
+  }
+  .card6 .img-wrap img {
+    top: -2px;
+  }
+  .sub_content ul li span {
+    font-size: 15px;
+  }
 
+
+  
+}
+@media all and (max-width:375px) {
+  .member1_sub .sub_content ul li {
+    width: 167px;
+    height: 167px;
+    padding: 17px 10px;
+  }
+  .sub_content ul li span {
+    font-size: 13px;
+  }
+  .sub_content ul .card5 p, .sub_content ul .card6 p {
+    margin-top: -1rem;
+  }
+  .card5 .img-wrap img {
+    top: -5px;
+  }
+  .card6 .img-wrap img {
+    top: -7px;
+  }
+
+
+}
