@@ -65,7 +65,7 @@
   margin-top: 60px;
 }
 .content_title {
-  margin-top: 120px;
+  margin-top: 10rem;
   margin-bottom: 35px;
   /* padding-left: 15px; */
   font-size: 30px;
@@ -110,7 +110,7 @@
 .newcont-2023 .biWrap .biBox .txtWrap span {
   display: inline-block;
   font-size: 20px;
-  line-height: 25px;
+  line-height: 1.4;
   color: #00263C;
 }
 .newcont-2023 .biWrap .biBox .txtWrap a span {
@@ -157,12 +157,12 @@
 .box-list.__layout3>li strong {
   color: #2F8DF8;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
 }
 .box-list>li {
   display: inline-block;
   margin: 0 16px;
-  padding: 48px 20px 42px;
+  padding: 55px 20px 42px;
   border: 1px solid #00263C;
   text-align: center;
   vertical-align: top;
@@ -171,6 +171,7 @@
 .box-list i {
   display: block;
   margin: 0 auto;
+  margin-bottom: 15px;
   
 }
 .icon-value-1 {
@@ -192,7 +193,7 @@
 /* 행동규범 */
 
 .section-text {
-  margin-bottom: 64px;
+  margin-bottom: 15rem;
 }
 .box-list.__layout5.type-act {
   margin-right: 0;
@@ -209,8 +210,7 @@
 }
 
 li .desc {
-  font-size: 25px;
-  margin-top: 20px;
+  font-size: 20px;
   text-align: center;
   font-weight: 600;
 }

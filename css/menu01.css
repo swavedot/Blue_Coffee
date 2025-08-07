@@ -1043,6 +1043,7 @@ a.btn-lg, button.btn-lg {
   .thumb-img.img31, .thumb-img.img32, .thumb-img.img33, .thumb-img.img34, .thumb-img.img35, .thumb-img.img36{
     width: 300px;
     height: 300px;
+    margin-top: 4rem;
   }
   .pickup-delivery-buttons {
     bottom: -104px;
