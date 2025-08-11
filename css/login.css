@@ -244,17 +244,37 @@
     font-size: 16px;
 }
 .renew_input_box input {
+  font-size: 12px;
   padding: 10px;
 }
 .renew_input_box {
   padding: 15px;
 }
+.id_save { 
+  font-size: 12px;
+}
+.checkmark-icon {
+  margin-right: 0rem;
+}
 .find_mem_wrap {
   padding: 50px 15px 40px;
 }
+.login_btn_wrap ul li a {
+  font-size: 12px;
+}
+.prod-info-box {
+  margin: 15px 0;
+  margin-left: 0rem;
+}
+.prod-item .thumb-box .thumb-img {
+  margin-left: 13px;
+}
+
+
+
 .btn_mem_login a {
   line-height: 45px;
-  font-size: 20px;
+  font-size: 15px;
 }
 .renew_joinform_v2 {
   padding: 0;
