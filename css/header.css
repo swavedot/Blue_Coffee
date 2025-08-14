@@ -262,7 +262,7 @@
 .menuHover{
   display: block; 
   opacity: 0; 
-  height: 350px; 
+  height: 100px; 
   position: absolute; 
   top: 0; 
   width: 100%; 
@@ -315,6 +315,9 @@
     margin: 0 auto;
     gap: 3rem;
   }
+  .menuHover {
+    display: none;
+  }
   .header .headerInner .utill {
     gap: 20px;
     margin-left: 50rem;
@@ -332,6 +335,9 @@
   .header .headerInner .utill {
     gap: 10px;
     margin-left: 17rem;
+  }
+  .menuHover {
+    display: none;
   }
    
 }
