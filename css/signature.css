@@ -5,7 +5,7 @@
 }
 .sub_title_content {
   position: relative;
-  max-width: 1440px;
+  max-width: 1240px;
   width: 100%;
   height: 400px;
   margin: 0 auto;
@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  left: 10rem;
+  left: 1rem;
   bottom: 10rem;
 }
 .sub_title .sub_title_text h1 {
@@ -35,15 +35,18 @@
 }
 .sub_title .sub_menu {
   position: absolute;
+  width: 100%;
+  margin: 0 auto;
   bottom: 0;
+  z-index: 888;
 }
 .sub_menu li  {
   display: flex;
   text-align: center;
 }
 .sub_menu li a {
-  width: 208px;
-  height: 53px;
+  width: 100%;
+  height: 50px;
   padding: 14px 10px;
   color: #fff;
   font-size: 18px;
@@ -52,145 +55,53 @@
 .sub_menu li .active {
   background-color: rgba(47, 141, 248, 0.6);
 }
-/* sub-end */
+/* menu */
 
-.prod-list-wrap {
+.sub_contents {
   width: 100%;
 }
-.prod-item .thumb-box .thumb-img {
-  width: 344px;
-  height: 344px;
+.container_inner {
+  max-width: 1440px;
+  width: 100%;
+  height: 1200px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
-.thumb-img.img01 {
-  background: url(../images/menu_image_01.png) no-repeat center / cover;
-}
-.thumb-img.img02 {
-  background: url(../images/menu_image_02.png) no-repeat center / cover;
-}
-.thumb-img.img03 {
-  background: url(../images/menu_image_03.png) no-repeat center / cover;
-}
-.thumb-img.img04 {
-  background: url(../images/menu_image_04.png) no-repeat center / cover;
-}
-.thumb-img.img05 {
-  background: url(../images/menu_image_05.png) no-repeat center / cover;
-}
-.thumb-img.img06 {
-  background: url(../images/menu_image_06.png) no-repeat center / cover;
-}
-/* 커피 */
-.thumb-img.img07 {
-  background: url(../images/menu_image_07.png) no-repeat center / cover;
-}
-.thumb-img.img08 {
-  background: url(../images/menu_image_08.png) no-repeat center / cover;
-}
-.thumb-img.img09 {
-  background: url(../images/menu_image_09.png) no-repeat center / cover;
-}
-.thumb-img.img10 {
-  background: url(../images/menu_image_10.png) no-repeat center / cover;
-}
-.thumb-img.img11 {
-  background: url(../images/menu_image_11.png) no-repeat center / cover;
-}
-.thumb-img.img12 {
-  background: url(../images/menu_image_12.png) no-repeat center / cover;
-}
-/* //커피 */
+.prod-title {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  top: 10rem;
+  z-index: 1;
 
-/* 라떼 */
-.thumb-img.img13 {
-  background: url(../images/menu_image_13.png) no-repeat center / cover;
 }
-.thumb-img.img14 {
-  background: url(../images/menu_image_14.png) no-repeat center / cover;
+.prod-title h1 {
+  font-size: 35px;
+  font-family: 'Pretendard-Regular';
 }
-.thumb-img.img15 {
-  background: url(../images/menu_image_15.png) no-repeat center / cover;
+.prod-list {
+  position: absolute;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 10rem;
+  top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7rem;
 }
-.thumb-img.img16 {
-  background: url(../images/menu_image_16.png) no-repeat center / cover;
-}
-.thumb-img.img17 {
-  background: url(../images/menu_image_17.png) no-repeat center / cover;
-}
-.thumb-img.img18 {
-  background: url(../images/menu_image_18.png) no-repeat center / cover;
-}
-/* //라떼 */
 
-/* 에이드 */
-.thumb-img.img19 {
-  background: url(../images/menu_image_19.png) no-repeat center / cover;
-}
-.thumb-img.img20 {
-  background: url(../images/menu_image_20.png) no-repeat center / cover;
-}
-.thumb-img.img21 {
-  background: url(../images/menu_image_21.png) no-repeat center / cover;
-}
-.thumb-img.img22 {
-  background: url(../images/menu_image_22.png) no-repeat center / cover;
-}
-.thumb-img.img23 {
-  background: url(../images/menu_image_23.png) no-repeat center / cover;
-}
-.thumb-img.img24 {
-  background: url(../images/menu_image_24.png) no-repeat center / cover;
-}
-/* //에이드 */
 
-/* 티/아이스티 */
-.thumb-img.img25 {
-  background: url(../images/menu_image_25.png) no-repeat center / cover;
-}
-.thumb-img.img26 {
-  background: url(../images/menu_image_26.png) no-repeat center / cover;
-}
-.thumb-img.img27 {
-  background: url(../images/menu_image_27.png) no-repeat center / cover;
-}
-.thumb-img.img28 {
-  background: url(../images/menu_image_28.png) no-repeat center / cover;
-}
-.thumb-img.img29 {
-  background: url(../images/menu_image_29.png) no-repeat center / cover;
-}
-.thumb-img.img30 {
-  background: url(../images/menu_image_30.png) no-repeat center / cover;
-}
-/* //티/아이스티 */
-
-/* 요거트스무디 */
-.thumb-img.img31 {
-  background: url(../images/menu_image_31.png) no-repeat center / cover;
-}
-.thumb-img.img32 {
-  background: url(../images/menu_image_32.png) no-repeat center / cover;
-}
-.thumb-img.img33 {
-  background: url(../images/menu_image_33.png) no-repeat center / cover;
-}
-.thumb-img.img34 {
-  background: url(../images/menu_image_34.png) no-repeat center / cover;
-}
-.thumb-img.img35 {
-  background: url(../images/menu_image_35.png) no-repeat center / cover;
-}
-.thumb-img.img36 {
-  background: url(../images/menu_image_36.png) no-repeat center / cover;
-}
-/* // 요거트스무디 */
 
 .cont-tit.tit-lg {
   font-size: 22px;
-  margin: 20px 0 20px 0;
+  margin: 20px 100px;
 }
 .prod-info-box {
-  margin: 15px 9rem;
-  margin-left: 7rem;
   font-size: 17px;
   text-align: center;
   font-weight: 600;
@@ -198,54 +109,11 @@
 .price {
   font-weight: 700;
 }
-.offscreen {
-  position: absolute !important;
-  display: block;
-  overflow: hidden;
-  height: 1px;
-  width: 1px;
-  clip: rect(1px, 1px, 1px, 1px);
-  font-size: 14px !important;
-}
-.prod-list-wrap .prod-list {
-  gap: 24px;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-}
-.prod-list > li {
-  flex: 1 1 calc(33.33% - 24px);
-}
-
-ul.prod-list:nth-child(2) {
-  margin-top : 20px;
-}
 .cont-body {
   justify-content: center;
   display: flex;
   width: 100%;
 }
-.cont-btn {
-  font-family: 'Pretendard';
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 186px;
-  background: #fff;
-  text-align: center;
-  margin: 0 auto;
-  border-radius: 32px;
-  border: 1px solid #2F8DF8;
-  color: #2F8DF8;
-  font-weight: 600;
-  font-size: 13px;
-  margin-bottom: 45px;
-}
-/* .prod-list {
-  width: 1080px;
-
-} */
 
 @media (max-width: 1024px) {
   .prod-item .thumb-box .thumb-img {
@@ -270,8 +138,11 @@ ul.prod-list:nth-child(2) {
     background: url(../images/svisual_04.png) no-repeat center / cover;
     background-position-x: -30rem;
   }
+  .sub_menu {
+    width: 100%;
+  }
   .sub_menu li a {
-      width: 165px;
+      width: 100%;
   }
   .sub_title .sub_title_text {
     left: 3rem;
